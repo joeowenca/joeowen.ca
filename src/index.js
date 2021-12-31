@@ -20,9 +20,6 @@ function ScrollTransition() {
   const headerText = document.getElementById('header-text')
 
   let scrollPos = document.documentElement.scrollTop || document.body.scrollTop
-  
-  const ceiling = 80
-  const floor = 300
 
   // Calculate current (Scroll Position / Heigh) for background alpha
   let height = (intro.offsetHeight / 3)
