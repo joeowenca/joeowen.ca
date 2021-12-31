@@ -25,7 +25,7 @@ function ScrollTransition() {
   const floor = 300
 
   // Calculate current (Scroll Position / Heigh) for background alpha
-  let height = (intro.offsetHeight / 2)
+  let height = (intro.offsetHeight / 3)
   let alpha = ((scrollPos) / height)
 
   // Update header background color

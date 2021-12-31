@@ -75,6 +75,18 @@ h1, h2, h3 {
   font-weight: 400;
 }
 
+.content h1 {
+  font-size: 18pt;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.content hr {
+  width: 75%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
 p {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 11pt;
@@ -145,5 +157,21 @@ p {
   .header span {
     font-size: 12pt;
     padding-left: 5px;
+  }
+
+  .photography-showcase img {
+    display: block;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+
+  .photography-showcase h2 {
+    font-size: 16pt;
+    padding-bottom: 10px;
+  }
+
+  .photography-showcase p {
+    font-weight: 50;
   }
 }
