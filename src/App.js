@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import {
-    BrowserRouter,
     Routes,
     Route,
     useLocation
@@ -26,13 +25,12 @@ function App() {
             <Header location={location} home={home} setHome={setHome} />
             <NavMenu />
             <Routes>
-                <Route path="/home" element={
+                <Route exact path="/" element={
                     <>
                         <Home />
                         <Intro />
                     </>
                 } />
-    
                 <Route path="/photography" element={<Photography />} />
                 <Route path="/videos" element={<Videos />} />
                 <Route path="/music" element={<Music />} />

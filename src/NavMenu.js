@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import dropDownMenu from './images/dropdown-menu.png'
 import dropDownClose from './images/dropdown-close.png'
@@ -15,12 +16,12 @@ function NavMenu() {
             {menu ?
                 <div className="nav-menu">
                     <img className={"dropdown-menu"} src={dropDownClose} onClick={() => setMenu(!menu)}></img>
-                    <div className="nav-options">
-                        <h2><a href="/home">Home</a></h2>
-                        <h2><a href="/photography">Photography</a></h2>
-                        <h2><a href="/videos">Videos</a></h2>
-                        <h2><a href="/music">Music</a></h2>
-                        <h2><a href="/projects">Projects</a></h2>
+                    <div className="nav-options"  onClick={() => setMenu(!menu)}>
+                        <h2><Link to="/">Home</Link></h2>
+                        <h2><Link to="/photography">Photography</Link></h2>
+                        <h2><Link to="/videos">Videos</Link></h2>
+                        <h2><Link to="/music">Music</Link></h2>
+                        <h2><Link to="/projects">Projects</Link></h2>
                         <div className="social-links">
                             <img src={linkedin}></img>
                             <img src={instagram}></img>

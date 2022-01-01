@@ -9,13 +9,13 @@ import './stylesheets/homepagecontent-styles-mobile.css'
 import './stylesheets/intro-styles-mobile.css'
 import './stylesheets/navmenu-styles-mobile.css'
 import './stylesheets/footer-styles-mobile.css'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )
