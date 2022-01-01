@@ -1,0 +1,30 @@
+@media only screen and (max-width: 600px) {
+    .photography-showcase {
+        margin-bottom: 20px;
+    }
+    
+    .photography-showcase img {
+        display: block;
+        width: 60%;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    
+    .photography-showcase h2 {
+        font-size: 16pt;
+        padding-bottom: 10px;
+    }
+    
+    .videos-showcase img {
+        display: block;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    
+    .videos-showcase h2 {
+        font-size: 16pt;
+        padding-bottom: 10px;
+    }
+    
+}

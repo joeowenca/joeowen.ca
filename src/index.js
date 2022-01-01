@@ -1,7 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles.css';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './stylesheets/styles.css'
+import './stylesheets/header-styles-mobile.css'
+import './stylesheets/homepagecontent-styles-mobile.css'
+import './stylesheets/intro-styles-mobile.css'
+import './stylesheets/navmenu-styles-mobile.css'
+import './stylesheets/footer-styles-mobile.css'
+import App from './App'
+import ScrollTransition from './ScrollTransition'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,35 +17,3 @@ ReactDOM.render(
 );
 
 document.body.onscroll = function() {ScrollTransition()}
-
-function ScrollTransition() {
-  const header = document.getElementById('header')
-  const intro = document.getElementById('intro')
-  const content = document.getElementById('content')
-  const headerImg = document.getElementById('header-img')
-  const headerText = document.getElementById('header-text')
-
-  let scrollPos = document.documentElement.scrollTop || document.body.scrollTop
-
-  // Calculate current (Scroll Position / Heigh) for background alpha
-  let height = (intro.offsetHeight / 3)
-  let alpha = ((scrollPos) / height)
-
-  // Update header background color
-  content.style.backgroundColor = "rgba(26, 26, 26, " + alpha + ")"
-
-  // Hide header image
-  if (alpha >= 1) {
-    headerImg.classList.remove('hidden')
-    headerText.classList.remove('hidden')
-    header.style.backgroundColor = "rgba(26, 26, 26, 1)"
-  } else {
-    headerImg.classList.add('hidden')
-    headerText.classList.add('hidden')
-    header.style.backgroundColor = "rgba(26, 26, 26, 0)"
-  }
-
-
-  console.log(alpha)
-
-}
