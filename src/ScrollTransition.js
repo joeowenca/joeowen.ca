@@ -1,18 +1,17 @@
 function ScrollTransition() {
   const header = document.getElementById('header')
-  const intro = document.getElementById('intro')
-  const content = document.getElementById('content')
+  const showcase = document.getElementById('showcase')
   const headerImg = document.getElementById('header-img')
   const headerText = document.getElementById('header-text')
 
   let scrollPos = document.documentElement.scrollTop || document.body.scrollTop
 
   // Calculate current (Scroll Position / Heigh) for background alpha
-  let height = (intro.offsetHeight / 3)
+  let height = (window.innerHeight / 3)
   let alpha = ((scrollPos) / height)
 
   // Update header background color
-  content.style.backgroundColor = "rgba(26, 26, 26, " + alpha + ")"
+  showcase.style.backgroundColor = "rgba(26, 26, 26, " + alpha + ")"
 
   // Hide header image
   if (alpha >= 1) {

@@ -25,6 +25,21 @@ p {
   font-size: 11pt;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+hr {
+  width: 75%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.active {
+  text-decoration: underline;
+}
+
 .header {
   position: fixed;
   box-sizing: border-box;
@@ -72,22 +87,11 @@ p {
 }
 
 .content {
-  padding: 100vh 10px 10px 10px;
-}
-
-.content h1, h2, h3 {
-  font-family: 'Lora', serif;
-  font-weight: 400;
+  padding: 80px 10px 10px 10px;
 }
 
 .content h1 {
-  font-size: 18pt;
   text-align: center;
+  font-size: 18pt;
   padding-bottom: 10px;
-}
-
-.content hr {
-  width: 75%;
-  margin: auto;
-  margin-bottom: 20px;
 }

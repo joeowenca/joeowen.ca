@@ -1,4 +1,14 @@
 @media only screen and (max-width: 600px) {
+    .showcase {
+        padding: 100vh 10px 10px 10px;
+    }
+
+    .showcase h1 {
+        font-size: 18pt;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    
     .photography-showcase {
         margin-bottom: 20px;
     }
@@ -9,7 +19,7 @@
         margin: auto;
         padding-bottom: 10px;
     }
-    
+
     .photography-showcase h2 {
         font-size: 16pt;
         padding-bottom: 10px;

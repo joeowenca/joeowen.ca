@@ -16,11 +16,11 @@ function NavMenu() {
                 <div className="nav-menu">
                     <img className={"dropdown-menu"} src={dropDownClose} onClick={() => setMenu(!menu)}></img>
                     <div className="nav-options">
-                        <h2>Home</h2>
-                        <h2>Photography</h2>
-                        <h2>Videos</h2>
-                        <h2>Music</h2>
-                        <h2>Projects</h2>
+                        <h2><a href="/home">Home</a></h2>
+                        <h2><a href="/photography">Photography</a></h2>
+                        <h2><a href="/videos">Videos</a></h2>
+                        <h2><a href="/music">Music</a></h2>
+                        <h2><a href="/projects">Projects</a></h2>
                         <div className="social-links">
                             <img src={linkedin}></img>
                             <img src={instagram}></img>
