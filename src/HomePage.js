@@ -4,13 +4,13 @@ import Header from './Header'
 import HomePageContent from './HomePageContent'
 import Footer from './Footer'
 
-function App() {
+function HomePage() {
   return (
     <div className="wrapper">
       <Intro />
       <div className="container">
         <Header />
-        <HomePageContent />
+        <HomePageContent />   
         <Footer />
       </div>
       <NavMenu />
@@ -18,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export default HomePage
