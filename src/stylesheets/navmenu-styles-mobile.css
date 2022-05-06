@@ -67,10 +67,13 @@
 
     .dropdown-menu {
         position: fixed;
-        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
         top: 10px;
         right: 10px;
-        padding: 10px;
     }
 
     .dropdown-menu.hidden {
@@ -84,14 +87,14 @@
     #dropdown-open::before {
         font-family: 'icomoon' !important;
         content: "\e901";
-        font-size: 30pt;
+        font-size: 24pt;
     }
 
     #dropdown-close::before {
         font-family: 'icomoon' !important;
         content: "\e900";
         color: white;
-        font-size: 30pt;
+        font-size: 24pt;
     }
 
     .instagram::before {
