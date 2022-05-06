@@ -18,10 +18,10 @@ function NavMenu() {
                         <h2><Link to="/music">Music</Link></h2>
                         <h2><Link to="/projects">Projects</Link></h2>
                         <div className="social-links">
-                            <div className="linkedin"></div>
                             <div className="instagram"></div>
                             <div className="youtube"></div>
                             <div className="soundcloud"></div>
+                            <div className="linkedin"></div>
                         </div>
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:  url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.eot?1kiq80');
-    src:  url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.eot?1kiq80#iefix') format('embedded-opentype'),
-      url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.ttf?1kiq80') format('truetype'),
-      url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.woff?1kiq80') format('woff'),
-      url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.svg?1kiq80#icomoon') format('svg');
+    src:  url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.eot?va9uvs');
+    src:  url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.eot?va9uvs#iefix') format('embedded-opentype'),
+      url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.ttf?va9uvs') format('truetype'),
+      url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.woff?va9uvs') format('woff'),
+      url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.svg?va9uvs#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -20,7 +20,8 @@
         width: 100vw;
         height: 100vh;
         padding: 10px;
-        background-color: rgba(0, 36, 64, 0.95);
+        /*background-color: rgba(0, 36, 64, 0.95);*/
+        background-color: rgba(20, 32, 24, 0.95);
         -webkit-animation-name: fade;
         -webkit-animation-duration: 0.3s;
         animation-name: fade;
@@ -47,10 +48,14 @@
     }
 
     .social-links {
+        font-family: 'icomoon' !important;
+        font-size: 14pt;
         padding-top: 30px;
+        color: white;
     }
 
-    .social-links img {
+    .social-links div {
+        display: inline-block;
         width: 20px;
         padding: 10px;
     }
@@ -87,5 +92,21 @@
         content: "\e900";
         color: white;
         font-size: 30pt;
+    }
+
+    .instagram::before {
+        content: "\ea92";
+    }
+
+    .youtube::before {
+        content: "\ea9d";
+    }
+
+    .soundcloud::before {
+        content: "\eac3";
+    }
+
+    .linkedin::before {
+        content: "\eaca";
     }
 }
