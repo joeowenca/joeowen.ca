@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-import {
-    Routes,
-    Route,
-    useLocation
-} from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
   
 import Header from './Header'
 import NavMenu from './NavMenu'

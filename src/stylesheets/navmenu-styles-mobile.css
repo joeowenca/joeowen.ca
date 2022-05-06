@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.eot?1kiq80');
+    src:  url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.eot?1kiq80#iefix') format('embedded-opentype'),
+      url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.ttf?1kiq80') format('truetype'),
+      url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.woff?1kiq80') format('woff'),
+      url('https://i.icomoon.io/public/temp/137b6d1146/UntitledProject/icomoon.svg?1kiq80#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
 @media only screen and (max-width: 600px) {
     .nav-menu {
         position: fixed;
@@ -55,8 +67,25 @@
         right: 10px;
         padding: 10px;
     }
-    
+
     .dropdown-menu.hidden {
         display: none;
+    }
+
+    #dropdown-open {
+        color: black;
+    }
+
+    #dropdown-open::before {
+        font-family: 'icomoon' !important;
+        content: "\e901";
+        font-size: 30pt;
+    }
+
+    #dropdown-close::before {
+        font-family: 'icomoon' !important;
+        content: "\e900";
+        color: white;
+        font-size: 30pt;
     }
 }

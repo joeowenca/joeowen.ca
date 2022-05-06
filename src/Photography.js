@@ -3,6 +3,61 @@ function Photography() {
         <div className="content">
             <h1>Photography</h1>
             <hr></hr>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
+            <p>yo</p>
         </div>
     )
 }

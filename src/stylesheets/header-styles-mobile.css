@@ -10,6 +10,11 @@
     .header h1 {
         font-size: 18pt;
         padding-left: 10px;
+        color: white;
+    }
+
+    #header-text {
+        color: black;
     }
     
     .header span {
