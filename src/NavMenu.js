@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
+import ChangeColor from './ChangeColor'
 
 function NavMenu() {
     const [menu, setMenu] = useState(false)
@@ -7,11 +9,11 @@ function NavMenu() {
     return (
         <>
             {menu ?
-                <div className="nav-menu">
+                <div onClick={() => ChangeColor()} className="nav-menu">
                     <div className={"dropdown-menu"} id={"dropdown-close"} onClick={() => setMenu(!menu)}></div>
                     <div className="nav-options"  onClick={() => setMenu(!menu)}>
                         <h2><Link to="/">Home</Link></h2>
-                        <h2 onClick={() => ChangeColor()}><Link to="/photography">Photography</Link></h2>
+                        <h2><Link to="/photography">Photography</Link></h2>
                         <h2><Link to="/videos">Videos</Link></h2>
                         <h2><Link to="/music">Music</Link></h2>
                         <h2><Link to="/projects">Projects</Link></h2>

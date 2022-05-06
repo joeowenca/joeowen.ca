@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import pfp from './images/profile-picture-header.jpg'
+import ChangeColor from './ChangeColor'
 
 function Header(props) {
     useEffect(() => {
@@ -15,7 +16,7 @@ function Header(props) {
     })
 
     return (
-        <div id="header" className="header" style={props.home ? {} : {backgroundColor: "#1A1A1A"}}>
+        <div id="header" className="header" onClick={() => ChangeColor()} style={props.home ? {} : {backgroundColor: "#1A1A1A"}}>
             <Link to="/">
                 <img id="header-img" className={props.home ? "header-img hidden" : "header-img"} src={pfp} alt="profile" />
                 <h1 id="header-text" className={props.home ? "header-text hidden" : "header-text"}>Joe Owen<span>.ca</span></h1>
