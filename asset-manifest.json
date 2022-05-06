@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/joeowen.ca/static/css/main.d5acae05.chunk.css",
+    "main.css": "/joeowen.ca/static/css/main.89395d18.chunk.css",
     "main.js": "/joeowen.ca/static/js/main.1bc14df5.chunk.js",
     "main.js.map": "/joeowen.ca/static/js/main.1bc14df5.chunk.js.map",
     "runtime-main.js": "/joeowen.ca/static/js/runtime-main.fa203e4b.js",
@@ -8,7 +8,7 @@
     "static/js/2.dd85fd70.chunk.js": "/joeowen.ca/static/js/2.dd85fd70.chunk.js",
     "static/js/2.dd85fd70.chunk.js.map": "/joeowen.ca/static/js/2.dd85fd70.chunk.js.map",
     "index.html": "/joeowen.ca/index.html",
-    "static/css/main.d5acae05.chunk.css.map": "/joeowen.ca/static/css/main.d5acae05.chunk.css.map",
+    "static/css/main.89395d18.chunk.css.map": "/joeowen.ca/static/css/main.89395d18.chunk.css.map",
     "static/js/2.dd85fd70.chunk.js.LICENSE.txt": "/joeowen.ca/static/js/2.dd85fd70.chunk.js.LICENSE.txt",
     "static/media/automotive-showcase.9d4005d4.jpg": "/joeowen.ca/static/media/automotive-showcase.9d4005d4.jpg",
     "static/media/intro-styles-mobile.css": "/joeowen.ca/static/media/background-portrait.5164eada.jpg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.fa203e4b.js",
     "static/js/2.dd85fd70.chunk.js",
-    "static/css/main.d5acae05.chunk.css",
+    "static/css/main.89395d18.chunk.css",
     "static/js/main.1bc14df5.chunk.js"
   ]
 }
