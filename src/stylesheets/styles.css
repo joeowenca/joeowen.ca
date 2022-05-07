@@ -3,7 +3,7 @@
 @font-face {
   font-family: 'icons';
   src:  url('../fonts/icomoon.eot?oc3vky');
-  src:  url('..fonts/icomoon.eot?oc3vky#iefix') format('embedded-opentype'),
+  src:  url('../fonts/icomoon.eot?oc3vky#iefix') format('embedded-opentype'),
     url('../fonts/icomoon.ttf?oc3vky') format('truetype'),
     url('../fonts/icomoon.woff?oc3vky') format('woff'),
     url('../fonts/icomoon.svg?oc3vky#icomoon') format('svg');
