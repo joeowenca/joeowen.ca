@@ -7,9 +7,9 @@ function ChangeColor() {
     let scrollPos = document.documentElement.scrollTop || document.body.scrollTop
     let height = (window.innerHeight / 3)
     let alpha = (scrollPos / height)
-    
+
     // Color white if not on the home page
-    if(location !== "#/") {
+    if(location !== "#/" && location !== "") {
         headerText.style.color = "rgb(255, 255, 255)"
         dropDownMenu.style.color = "rgb(255, 255, 255)"
     
