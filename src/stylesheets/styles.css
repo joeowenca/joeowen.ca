@@ -41,12 +41,6 @@ a {
   text-decoration: none;
 }
 
-hr {
-  width: 75%;
-  margin: auto;
-  margin-bottom: 20px;
-}
-
 .active {
   text-decoration: underline;
 }

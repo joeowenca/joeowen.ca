@@ -8,7 +8,6 @@ function Home() {
   return ( 
     <div id="showcase" className="showcase">
       <h1>Photography</h1>
-      <hr></hr>
       <div className="photography-showcase">
         <img className="img-showcase landscapes" src={landscapeShowcase}></img>
         <h2>Landscapes</h2>
@@ -32,7 +31,6 @@ function Home() {
       </div>
 
       <h1>Videos</h1>
-      <hr></hr>
       <div className="videos-showcase">
         <img className="mtb-showcase-img" src={mtbShowcase}></img>
         <h2>Mountain biking</h2>

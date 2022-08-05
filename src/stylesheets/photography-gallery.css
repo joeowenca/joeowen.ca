@@ -1,0 +1,13 @@
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: start;
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border: 1px solid black;
+    object-fit: cover;
+}
