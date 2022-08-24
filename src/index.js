@@ -12,6 +12,7 @@ import './stylesheets/intro-styles-mobile.css'
 import './stylesheets/navmenu-styles-mobile.css'
 import './stylesheets/footer-styles-mobile.css'
 import './stylesheets/photography-gallery.css'
+import './stylesheets/lightbox.css'
 import { HashRouter } from 'react-router-dom'
 
 window.onload = function() {ChangeColor()}

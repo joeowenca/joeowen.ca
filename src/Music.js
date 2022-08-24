@@ -1,4 +1,4 @@
-function Music() {
+let Music = () => {
     return (
         <div className="content">
             <h1>Music</h1>

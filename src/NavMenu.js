@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import ChangeColor from './ChangeColor'
 
-function NavMenu() {
+let NavMenu = (props) => {
     const [menu, setMenu] = useState(false)
 
     return (
@@ -26,7 +26,7 @@ function NavMenu() {
                     </div>
                 </div>
             : ""}
-            <div className={menu ? "dropdown-menu hidden" : "dropdown-menu"} id={"dropdown-open"} onClick={() => setMenu(!menu)}></div>
+            <div className={menu || props.nav ? "dropdown-menu hidden" : "dropdown-menu"} id={"dropdown-open"} onClick={() => setMenu(!menu)}></div>
         </>
     )
 }

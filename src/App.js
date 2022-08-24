@@ -15,11 +15,16 @@ import Projects from './Projects'
 function App() {
     const location = useLocation()
     const [home, setHome] = useState(false)
+    const [nav, setNav] = useState(false)
+
+    let hideNav = (navStatus) => {
+        setNav(navStatus)
+    }
 
     return(
         <div className="container">
             <Header location={location} home={home} setHome={setHome} />
-            <NavMenu />
+            <NavMenu nav={nav} />
             <Routes>
                 <Route exact path="/" element={
                     <>
@@ -27,7 +32,7 @@ function App() {
                         <Intro />
                     </>
                 } />
-                <Route path="/photography" element={<Photography />} />
+                <Route path="/photography" element={<Photography nav={nav} setNav={setNav} />} />
                 <Route path="/videos" element={<Videos />} />
                 <Route path="/music" element={<Music />} />
                 <Route path="/projects" element={<Projects />} />
