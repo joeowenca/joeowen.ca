@@ -1,11 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import sportsImages from './images/Sports/index.js'
 
 let Lightbox = (props) => {
+
+    useEffect(() => {
+        document.querySelector('#img-' + props.index).scrollIntoView({
+            inline: 'start'
+        })
+    }, [])
+
     return (
         <div className="lightbox">
-            <div className={"dropdown-menu"} id={"dropdown-close"} onClick={() => props.hideLightbox()}></div>
-            <img src={Object.values(sportsImages)[props.index].default} alt="" />
+            <div 
+                className={"dropdown-menu"} 
+                id={"dropdown-close"} 
+                onClick={() => props.hideLightbox()}>
+            </div>
+
+
+                {
+                    Object.values(sportsImages).map((value, index) => {
+                        return (
+                            <img 
+                                src={value.default} 
+                                id={"img-" + index}
+                                key={index} 
+                                alt=""
+                            />
+                        )
+                    })
+                }
+
         </div>
     )
 }

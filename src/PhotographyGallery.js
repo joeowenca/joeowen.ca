@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import sportsImages from './images/Sports/index.js'
+import sportsImage from './images/Sports/_DSC0368.jpg'
 
 let PhotographyGallery = (props) => {
     return (
         <>
             <div className="photography-gallery">
                 <div className="automotive-gallery gallery">
+                <img src={sportsImage}></img>
                     {
                         Object.values(sportsImages).map((value, index) => {
                             return (
@@ -31,8 +33,6 @@ let PhotographyGallery = (props) => {
                 <div className="misc-gallery">
 
                 </div>
-
-                
             </div>
         </>
     )

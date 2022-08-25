@@ -21,7 +21,9 @@ let Photography = (props) => {
         <div className="content">
             <h1>Photography</h1>
 
-            {lightbox ? <Lightbox index={index} hideLightbox={hideLightbox} /> : ""}
+            {lightbox ? 
+                <Lightbox index={index} hideLightbox={hideLightbox} />
+            : ""}
 
             <PhotographyGallery showLightbox={showLightbox} />
         </div>

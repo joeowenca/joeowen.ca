@@ -1,8 +1,6 @@
 .lightbox {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.85);
     top: 0px;
@@ -10,10 +8,23 @@
     width: 100vw;
     height: 100vh;
     z-index: 1000;
+    overflow: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 0px;
     -webkit-animation-name: fade;
     -webkit-animation-duration: 0.3s;
     animation-name: fade;
     animation-duration: 0.3s;
+}
+
+.lightbox::-webkit-scrollbar {
+    display: none;
+}
+  
+.lightbox {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
 }
 
 @-webkit-keyframes fade {
@@ -26,7 +37,15 @@
     to {opacity: 1}
 }
 
+.img-container {
+    vertical-align: middle;
+}
+
 .lightbox img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 75px 0px 75px;
     max-width: 100%;
     max-height: 65%;
+    scroll-snap-align: center;
 }
