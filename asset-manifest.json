@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/joeowen.ca/static/css/main.23efa8a4.chunk.css",
-    "main.js": "/joeowen.ca/static/js/main.053d7c59.chunk.js",
-    "main.js.map": "/joeowen.ca/static/js/main.053d7c59.chunk.js.map",
+    "main.js": "/joeowen.ca/static/js/main.ed78f8dd.chunk.js",
+    "main.js.map": "/joeowen.ca/static/js/main.ed78f8dd.chunk.js.map",
     "runtime-main.js": "/joeowen.ca/static/js/runtime-main.fa203e4b.js",
     "runtime-main.js.map": "/joeowen.ca/static/js/runtime-main.fa203e4b.js.map",
     "static/js/2.8ac2cbc3.chunk.js": "/joeowen.ca/static/js/2.8ac2cbc3.chunk.js",
@@ -10,7 +10,7 @@
     "index.html": "/joeowen.ca/index.html",
     "static/css/main.23efa8a4.chunk.css.map": "/joeowen.ca/static/css/main.23efa8a4.chunk.css.map",
     "static/js/2.8ac2cbc3.chunk.js.LICENSE.txt": "/joeowen.ca/static/js/2.8ac2cbc3.chunk.js.LICENSE.txt",
-    "static/media/_DSC0368.jpg": "/joeowen.ca/static/media/_DSC0368.d116fb5a.jpg",
+    "static/media/DSC0368.jpg": "/joeowen.ca/static/media/DSC0368.d116fb5a.jpg",
     "static/media/_DSC0607.jpg": "/joeowen.ca/static/media/_DSC0607.4a56ea46.jpg",
     "static/media/_DSC1614.jpg": "/joeowen.ca/static/media/_DSC1614.e021c83f.jpg",
     "static/media/_DSC1619.jpg": "/joeowen.ca/static/media/_DSC1619.c465c4b9.jpg",
@@ -61,6 +61,6 @@
     "static/js/runtime-main.fa203e4b.js",
     "static/js/2.8ac2cbc3.chunk.js",
     "static/css/main.23efa8a4.chunk.css",
-    "static/js/main.053d7c59.chunk.js"
+    "static/js/main.ed78f8dd.chunk.js"
   ]
 }
