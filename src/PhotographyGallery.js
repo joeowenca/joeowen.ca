@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import sportsImages from './images/Sports/index.js'
-import sportsImage from './images/Sports/_DSC0368.jpg'
+import sportsImage from './images/Sports/DSC0368.jpg'
 
 let PhotographyGallery = (props) => {
     return (
