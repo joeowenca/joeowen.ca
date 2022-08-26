@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import ScrollTransition from './ScrollTransition'
 import ChangeColor from './ChangeColor'
+import Header from './Header'
 import App from './App'
 
 import './stylesheets/styles.css'
@@ -21,6 +22,7 @@ document.body.onscroll = function() {ScrollTransition()}
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
+      <Header />
       <App />
     </HashRouter>
   </React.StrictMode>,

@@ -1,25 +1,29 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 import pfp from './images/profile-picture-header.jpg'
 import ChangeColor from './ChangeColor'
 
-function Header(props) {
+function Header() {
+    const location = useLocation()
+    const [home, setHome] = useState(false)
+
     useEffect(() => {
-        if(props.location.pathname !== '/') {
-            props.setHome(false)
+        if(location.pathname !== '/') {
+            setHome(false)
         } else {
-            props.setHome(true)
+            setHome(true)
         }
 
         window.scrollTo(0,0); 
+        console.log("I just scrolled!")
     })
 
     return (
-        <div id="header" className="header" onClick={() => ChangeColor()} style={props.home ? {} : {backgroundColor: "#1A1A1A"}}>
+        <div id="header" className="header" onClick={() => ChangeColor()} style={home ? {} : {backgroundColor: "#1A1A1A"}}>
             <Link to="/">
-                <img id="header-img" className={props.home ? "header-img hidden" : "header-img"} src={pfp} alt="profile" />
-                <h1 id="header-text" className={props.home ? "header-text hidden" : "header-text"}>Joe Owen<span>.ca</span></h1>
+                <img id="header-img" className={home ? "header-img hidden" : "header-img"} src={pfp} alt="profile" />
+                <h1 id="header-text" className={home ? "header-text hidden" : "header-text"}>Joe Owen<span>.ca</span></h1>
             </Link>
         </div>
     )

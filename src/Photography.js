@@ -16,7 +16,7 @@ let Photography = (props) => {
     let hideLightbox = () => {
         setLightbox(false)
         props.setNav(false)
-        document.body.setAttribute("style", "overflow-y: auto;")
+        document.body.setAttribute("style", "overflow-y: auto; -webkit-overflow-scrolling: touch;")
     }
 
     return (
