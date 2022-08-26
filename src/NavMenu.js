@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import ChangeColor from './ChangeColor'
@@ -6,12 +6,22 @@ import ChangeColor from './ChangeColor'
 let NavMenu = (props) => {
     const [menu, setMenu] = useState(false)
 
+    let showNav = () => {
+        document.body.setAttribute("style", "overflow-y: hidden;")
+        setMenu(!menu)
+    }
+
+    let hideNav = () => {
+        document.body.setAttribute("style", "overflow-y: auto;")
+        setMenu(!menu)
+    }
+
     return (
         <>
             {menu ?
                 <div onClick={() => ChangeColor()} className="nav-menu">
-                    <div className={"dropdown-menu"} id={"dropdown-close"} onClick={() => setMenu(!menu)}></div>
-                    <div className="nav-options"  onClick={() => setMenu(!menu)}>
+                    <div className={"dropdown-menu"} id={"dropdown-close"} onClick={() => hideNav()}></div>
+                    <div className="nav-options"  onClick={() => hideNav()}>
                         <h2><Link to="/">Home</Link></h2>
                         <h2><Link to="/photography">Photography</Link></h2>
                         <h2><Link to="/videos">Videos</Link></h2>
@@ -26,7 +36,7 @@ let NavMenu = (props) => {
                     </div>
                 </div>
             : ""}
-            <div className={menu || props.nav ? "dropdown-menu hidden" : "dropdown-menu"} id={"dropdown-open"} onClick={() => setMenu(!menu)}></div>
+            <div className={menu || props.nav ? "dropdown-menu hidden" : "dropdown-menu"} id={"dropdown-open"} onClick={() => showNav()}></div>
         </>
     )
 }

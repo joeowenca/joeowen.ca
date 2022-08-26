@@ -10,13 +10,13 @@ let Photography = (props) => {
         setLightbox(true)
         setIndex(index)
         props.setNav(true)
-
+        document.body.setAttribute("style", "overflow-y: hidden;")
     }
 
     let hideLightbox = () => {
         setLightbox(false)
         props.setNav(false)
-
+        document.body.setAttribute("style", "overflow-y: auto;")
     }
 
     return (
