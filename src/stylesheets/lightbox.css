@@ -44,7 +44,7 @@
 .lightbox img {
     display: inline-block;
     vertical-align: middle;
-    margin: 0px 75px 0px 75px;
+    margin: 0px 15% 0px 15%;
     max-width: 100%;
     max-height: 55%;
     scroll-snap-align: center;

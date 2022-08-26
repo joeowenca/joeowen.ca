@@ -55,6 +55,10 @@ a {
   font-family: 'Lora', serif;
 }
 
+.header.background {
+  background-image: linear-gradient(#1A1A1A, transparent);
+}
+
 .header-img {
   position: absolute;
   top: 10px;
