@@ -6,13 +6,13 @@ let PhotographyGallery = (props) => {
         <>
             <div className="photography-gallery">
                 <div className="automotive-gallery gallery">
-                    {
-                        Object.values(sportsImages).map((value, index) => {
-                            return (
-                                    <img src={value.default} onClick={() => props.showLightbox(index)} className="thumbnail" key={index} alt="" />
-                            )
-                        })
-                    }
+                        {
+                            Object.values(sportsImages).map((value, index) => {
+                                return (
+                                        <img src={value.default} onClick={() => props.showLightbox(index)} className="thumbnail" key={index} alt="" />
+                                )
+                            })
+                        }
                     
                 </div>
 

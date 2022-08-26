@@ -15,8 +15,7 @@ function Header() {
             setHome(true)
         }
 
-        window.scrollTo(0,0); 
-        console.log("I just scrolled!")
+        window.scrollTo(0,0);
     })
 
     return (
