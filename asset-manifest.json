@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/joeowen.ca/static/css/main.9fbf0eba.chunk.css",
-    "main.js": "/joeowen.ca/static/js/main.0b433f18.chunk.js",
-    "main.js.map": "/joeowen.ca/static/js/main.0b433f18.chunk.js.map",
+    "main.js": "/joeowen.ca/static/js/main.bd1ee24d.chunk.js",
+    "main.js.map": "/joeowen.ca/static/js/main.bd1ee24d.chunk.js.map",
     "runtime-main.js": "/joeowen.ca/static/js/runtime-main.fa203e4b.js",
     "runtime-main.js.map": "/joeowen.ca/static/js/runtime-main.fa203e4b.js.map",
     "static/js/2.7e13a5c9.chunk.js": "/joeowen.ca/static/js/2.7e13a5c9.chunk.js",
@@ -61,6 +61,6 @@
     "static/js/runtime-main.fa203e4b.js",
     "static/js/2.7e13a5c9.chunk.js",
     "static/css/main.9fbf0eba.chunk.css",
-    "static/js/main.0b433f18.chunk.js"
+    "static/js/main.bd1ee24d.chunk.js"
   ]
 }
