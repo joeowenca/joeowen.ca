@@ -84,7 +84,7 @@ a {
 }
 
 .header-text.hidden {
-  left: 16px;
+  left: 13px;
 }
 
 .header span {
@@ -102,5 +102,5 @@ a {
 .content h1 {
   text-align: center;
   font-size: 18pt;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }

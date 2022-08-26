@@ -1,13 +1,15 @@
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    place-items: center stretch;
     column-gap: 10px;
-    row-gap: 10px;
+}
+
+.column {
+    width: 100%;
 }
 
 .thumbnail {
+    display: block;
+    margin-bottom: 10px;
     width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
 }
