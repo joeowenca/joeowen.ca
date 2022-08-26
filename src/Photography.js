@@ -10,11 +10,13 @@ let Photography = (props) => {
         setLightbox(true)
         setIndex(index)
         props.setNav(true)
+
     }
 
     let hideLightbox = () => {
         setLightbox(false)
         props.setNav(false)
+
     }
 
     return (

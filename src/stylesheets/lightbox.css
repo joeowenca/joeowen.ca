@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.75);
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -48,4 +48,5 @@
     max-width: 100%;
     max-height: 65%;
     scroll-snap-align: center;
+    box-shadow: -2px 2px 20px black;
 }
