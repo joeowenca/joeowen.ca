@@ -1,6 +1,18 @@
-.gallery {
+.two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+}
+
+.three-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.four-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
 }
 

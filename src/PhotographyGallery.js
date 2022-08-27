@@ -1,36 +1,39 @@
-import React, { useState } from 'react'
-import sportsImages from './images/Sports/index.js'
-
-const sportsImagesObject = Object.values(sportsImages)
+import React, {useState, useEffect} from 'react'
+import TwoColumns from './TwoColumns'
+import ThreeColumns from './ThreeColumns'
+import FourColumns from './FourColumns'
 
 let PhotographyGallery = (props) => {
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        function handleResize() {
+            setScreenWidth(window.innerWidth)
+            console.log("I resized!")
+        }
+      
+        window.addEventListener('resize', handleResize)
+
+        return _ => {
+            window.removeEventListener('resize', handleResize)
+        }
+    })
+
     return (
         <>
             <div className="photography-gallery">
                 <div className="automotive-gallery gallery">
-                    <div className="column">
-                        {
-                            sportsImagesObject.map((value, index) => {
-                                if ((index) % 2 === 0) {
-                                    return (
-                                        <img src={value.default} onClick={() => props.showLightbox(index)} className="thumbnail" key={index} alt="" />
-                                    )
-                                }
-                            })
-                        }
-                    </div>
+                    {screenWidth > 0 && screenWidth < 768 ? 
+                        <TwoColumns showLightbox={props.showLightbox} />
+                    : " "}
 
-                    <div className="column">
-                        {
-                            sportsImagesObject.map((value, index) => {
-                                if ((index + 1) % 2 === 0) {
-                                    return (
-                                        <img src={value.default} onClick={() => props.showLightbox(index)} className="thumbnail" key={index} alt="" />
-                                    )
-                                }
-                            })
-                        }
-                    </div>
+                    {screenWidth >= 768 && screenWidth < 1024 ? 
+                        <ThreeColumns showLightbox={props.showLightbox} />
+                    : " "}
+
+                    {screenWidth >= 1024 ? 
+                        <FourColumns showLightbox={props.showLightbox} />
+                    : " "}
                     
                 </div>
 

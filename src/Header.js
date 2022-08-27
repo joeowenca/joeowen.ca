@@ -21,8 +21,8 @@ function Header() {
     return (
         <div id="header" onClick={() => ChangeColor()} className={home ? "header" : "header background" }>
             <Link to="/">
-                <img id="header-img" className={home ? "header-img hidden" : "header-img hidden"} src={pfp} alt="profile" />
-                <h1 id="header-text" className={home ? "header-text hidden" : "header-text hidden"}>Joe Owen<span>.ca</span></h1>
+                <img id="header-img" className={home ? "header-img hidden" : "header-img"} src={pfp} alt="profile" />
+                <h1 id="header-text" className={home ? "header-text hidden" : "header-text"}>Joe Owen<span>.ca</span></h1>
             </Link>
         </div>
     )
