@@ -18,19 +18,20 @@ let Lightbox = (props) => {
             </div>
 
 
-                {
-                    Object.values(sportsImages).map((value, index) => {
-                        return (
-                            <img 
-                                src={value.default} 
-                                id={"img-" + index}
-                                key={index} 
-                                alt=""
-                            />
-                        )
-                    })
-                }
+            {
+                Object.values(sportsImages).map((value, index) => {
+                    return (
+                        <img 
+                            src={value.default} 
+                            id={"img-" + index}
+                            key={index} 
+                            alt=""
+                        />
+                    )
+                })
+            }
 
+            <div className="closer" onClick={() => props.hideLightbox()}></div>
         </div>
     )
 }
