@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { useInView } from 'react-intersection-observer';
 import TwoColumns from './TwoColumns'
 import ThreeColumns from './ThreeColumns'
 import FourColumns from './FourColumns'
@@ -9,7 +10,6 @@ let PhotographyGallery = (props) => {
     useEffect(() => {
         function handleResize() {
             setScreenWidth(window.innerWidth)
-            console.log("I resized!")
         }
       
         window.addEventListener('resize', handleResize)

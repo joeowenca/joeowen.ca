@@ -57,3 +57,12 @@
     box-shadow: -2px 2px 20px black;
     z-index: 1001;
 }
+
+.img-counter {
+    font-family: 'Lora', serif;
+    position: fixed;
+    text-align: right;
+    bottom: 9%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
