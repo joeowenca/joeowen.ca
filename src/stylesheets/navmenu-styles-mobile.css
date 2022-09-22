@@ -75,13 +75,13 @@
 
     #dropdown-open::before {
         font-family: 'icons' !important;
-        content: "\e901";
+        content: "\e902";
         font-size: 24pt;
     }
 
     #dropdown-close::before {
         font-family: 'icons' !important;
-        content: "\e900";
+        content: "\e901";
         color: white;
         font-size: 24pt;
     }
