@@ -6,13 +6,13 @@ import FourColumns from './FourColumns'
 
 let Nature = (props) => {
 
-    const {screenWidth, showLightbox, setCategory} = props
+    const {screenWidth, showLightbox, changeCategory} = props
 
     return (
         <>
             <div className="gallery">
                 <div className="gallery-header">
-                    <p className="back-btn" onClick={() => setCategory("none")}>{"Back"}</p>
+                    <p className="back-btn" onClick={() => changeCategory("none")}>{"Back"}</p>
                     <h1>Nature</h1>
                 </div>
                 {screenWidth > 0 && screenWidth < 540 ? 
