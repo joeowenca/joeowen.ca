@@ -25,3 +25,21 @@
     margin-bottom: 10px;
     width: 100%;
 }
+
+.gallery-header {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.gallery-header h1 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.back-btn {
+    position: absolute;
+    left: 10px;
+   /* vertically center the icon */
+    font-size: 16pt;
+    top: 50%; transform: translateY(-50%);
+}

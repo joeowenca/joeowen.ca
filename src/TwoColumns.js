@@ -1,17 +1,17 @@
 import React from 'react'
-import sportsImages from './images/Sports/index.js'
-
-const sportsImagesObject = Object.values(sportsImages)
 
 let TwoColumns = (props) => {
+    
+    const {images, showLightbox} = props
+
     return (
         <div className="two-columns">
             <div className="column">
                 {
-                    sportsImagesObject.map((value, index) => {
+                    Object.values(images).map((value, index) => {
                         if ((index + 0) % 2 === 0) {
                             return (
-                                <img src={value.default} onClick={() => props.showLightbox(index)} className="thumbnail" key={index} alt="" />
+                                <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
                             )
                         }
                     })
@@ -20,10 +20,10 @@ let TwoColumns = (props) => {
 
             <div className="column">
                 {
-                    sportsImagesObject.map((value, index) => {
+                    Object.values(images).map((value, index) => {
                         if ((index + 1) % 2 === 0) {
                             return (
-                                <img src={value.default} onClick={() => props.showLightbox(index)} className="thumbnail" key={index} alt="" />
+                                <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
                             )
                         }
                     })

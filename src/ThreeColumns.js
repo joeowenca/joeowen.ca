@@ -1,17 +1,17 @@
 import React from 'react'
-import sportsImages from './images/Sports/index.js'
-
-const sportsImagesObject = Object.values(sportsImages)
 
 let ThreeColumns = (props) => {
+    
+    const {images, showLightbox} = props
+
     return (
         <div className="three-columns">
             <div className="column">
                 {
-                    sportsImagesObject.map((value, index) => {
+                    Object.values(images).map((value, index) => {
                         if ((index + 0) % 3 === 0) {
                             return (
-                                <img src={value.default} onClick={() => props.showLightbox(index)} className="thumbnail" key={index} alt="" />
+                                <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
                             )
                         }
                     })
@@ -20,10 +20,10 @@ let ThreeColumns = (props) => {
 
             <div className="column">
                 {
-                    sportsImagesObject.map((value, index) => {
+                    Object.values(images).map((value, index) => {
                         if ((index + 2) % 3 === 0) {
                             return (
-                                <img src={value.default} onClick={() => props.showLightbox(index)} className="thumbnail" key={index} alt="" />
+                                <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
                             )
                         }
                     })
@@ -32,10 +32,10 @@ let ThreeColumns = (props) => {
 
             <div className="column">
                 {
-                    sportsImagesObject.map((value, index) => {
+                    Object.values(images).map((value, index) => {
                         if ((index + 1) % 3 === 0) {
                             return (
-                                <img src={value.default} onClick={() => props.showLightbox(index)} className="thumbnail" key={index} alt="" />
+                                <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
                             )
                         }
                     })
