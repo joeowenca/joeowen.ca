@@ -1,5 +1,5 @@
 import React from 'react'
-import images from './images/Sports/index.js'
+import images from './images/Automotive/index.js'
 import TwoColumns from './TwoColumns'
 import ThreeColumns from './ThreeColumns'
 import FourColumns from './FourColumns'
