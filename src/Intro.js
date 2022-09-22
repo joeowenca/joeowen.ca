@@ -1,4 +1,4 @@
-import pfp from './images/profile-picture-header.jpg'
+import pfp from './images/profile-picture-header-2.jpg'
 
 function Intro() {
     return (

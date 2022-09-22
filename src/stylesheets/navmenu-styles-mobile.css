@@ -8,8 +8,8 @@
         width: 100vw;
         height: 100vh;
         padding: 10px;
-        background-color: rgba(0, 36, 64, 0.95);
-        /*background-color: rgba(20, 32, 24, 0.95);*/
+        /*background-color: rgba(0, 36, 64, 0.95);*/
+        background-color: rgba(24, 34, 24, 0.95);
         -webkit-animation-name: fade;
         -webkit-animation-duration: 0.3s;
         animation-name: fade;

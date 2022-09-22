@@ -27,13 +27,8 @@ body {
   width: 100%;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-}
-
-h2, h3 {
-  font-family: 'Lora', serif;
   font-weight: 400;
 }
 

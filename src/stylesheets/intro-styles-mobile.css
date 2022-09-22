@@ -5,7 +5,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background: url('../images/background-portrait-3.jpg') no-repeat center center fixed;
+        background: url('../images/background-portrait.jpg') no-repeat center center fixed;
         background-attachment: scroll;
         -webkit-background-size: cover;
         -moz-background-size: cover;
