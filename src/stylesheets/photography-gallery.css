@@ -1,18 +1,19 @@
 .photography-category {
     display: block;
-    width: 60%;
+    width: 70%;
     margin: auto;
     padding-bottom: 10px;
 }
 
 .photography-categories h2 {
-    display: block;
     text-align: center;
+    font-size: 18pt;
+    padding-bottom: 10px;
 }
 
 .photography-categories button {
     display: block;
-    margin: 10px auto 20px auto;
+    margin: 0px auto 20px auto;
 }
 
 .two-columns {
