@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 
 let LightboxImage = (props) => {
 
-    const {src, id, index, alt, getImageInView} = props
+    const {src, className, id, index, alt, getImageInView} = props
 
     const { ref, inView } = useInView({
         threshold: 0.9,
@@ -17,7 +17,8 @@ let LightboxImage = (props) => {
 
     return (
         <img 
-            src={src} 
+            src={src}
+            className={className}
             id={id}
             ref={ref}
             key={index} 

@@ -30,16 +30,42 @@ let Lightbox = (props) => {
 
             {
                 Object.values(images).map((value, index) => {
-                    return (
-                        <LightboxImage 
-                            src={value.default} 
-                            id={"img-" + index}
-                            index={index}
-                            key={index} 
-                            alt=""
-                            getImageInView={getImageInView}
-                        />
-                    )
+                    if (index === 0) {
+                        return (
+                            <LightboxImage 
+                                src={value.default} 
+                                className="first"
+                                id={"img-" + index}
+                                index={index}
+                                key={index} 
+                                alt=""
+                                getImageInView={getImageInView}
+                            />
+                        )
+                    } else if (index === Object.values(images).length - 1) {
+                        return (
+                            <LightboxImage 
+                                src={value.default}
+                                className="last" 
+                                id={"img-" + index}
+                                index={index}
+                                key={index} 
+                                alt=""
+                                getImageInView={getImageInView}
+                            />
+                        )
+                    } else {
+                        return (
+                            <LightboxImage 
+                                src={value.default} 
+                                id={"img-" + index}
+                                index={index}
+                                key={index} 
+                                alt=""
+                                getImageInView={getImageInView}
+                            />
+                        )
+                    }
                 })
             }
 

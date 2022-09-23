@@ -40,7 +40,7 @@
     left: 0px;
     width: 100vw;
     height: 100vh;
-    background: none !important;
+    background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .img-container {
@@ -56,6 +56,13 @@
     scroll-snap-align: center;
     box-shadow: -2px 2px 20px black;
     z-index: 1001;
+}
+.lightbox .first {
+    margin-left: 50%;
+}
+
+.lightbox .last {
+    margin-right: 50%;
 }
 
 .img-counter {
