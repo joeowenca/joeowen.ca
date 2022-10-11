@@ -24,7 +24,7 @@ function App() {
                         <Intro />
                     </>
                 } />
-                <Route path="/photography" element={<Photography nav={nav} setNav={setNav} />} />
+                <Route path="/photography/*" element={<Photography nav={nav} setNav={setNav} />} />
                 <Route path="/videos" element={<Videos />} />
                 <Route path="/music" element={<Music />} />
                 <Route path="/projects" element={<Projects />} />

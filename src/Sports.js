@@ -6,13 +6,12 @@ import FourColumns from './FourColumns'
 
 let Sports = (props) => {
 
-    const {screenWidth, showLightbox, changeCategory} = props
+    const {screenWidth, showLightbox} = props
 
     return (
         <>
             <div className="gallery">
                 <div className="gallery-header">
-                    <p className="back-btn" onClick={() => changeCategory("none")}>{"Back"}</p>
                     <h1>Sports</h1>
                 </div>
                 {screenWidth > 0 && screenWidth < 540 ? 
