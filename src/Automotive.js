@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import images from './images/Automotive/index.js'
 import TwoColumns from './TwoColumns'
 import ThreeColumns from './ThreeColumns'
@@ -7,6 +7,10 @@ import FourColumns from './FourColumns'
 let Automotive = (props) => {
 
     const {screenWidth, showLightbox} = props
+
+    useEffect(() => {
+        document.title = 'Joe Owen | Automotive'
+    }, [])
 
     return (
         <>

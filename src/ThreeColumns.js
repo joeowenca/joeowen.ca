@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 let ThreeColumns = (props) => {
     
@@ -15,7 +16,7 @@ let ThreeColumns = (props) => {
                             )
                         } else {
                             return (
-                                <></>
+                                <React.Fragment key={uuidv4()}></React.Fragment>
                             )
                         }
                     })
@@ -31,7 +32,7 @@ let ThreeColumns = (props) => {
                             )
                         } else {
                             return (
-                                <></>
+                                <React.Fragment key={uuidv4()}></React.Fragment>
                             )
                         }
                     })
@@ -47,7 +48,7 @@ let ThreeColumns = (props) => {
                             )
                         } else {
                             return (
-                                <></>
+                                <React.Fragment key={uuidv4()}></React.Fragment>
                             )
                         }
                     })

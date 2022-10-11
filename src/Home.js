@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react'
+
 import landscapeShowcase from './images/Showcase/landscape-showcase.jpg'
 import portraitShowcase from './images/Showcase/portrait-showcase.jpg'
 import automotiveShowcase from './images/Showcase/automotive-showcase.jpg'
@@ -5,6 +7,10 @@ import mtbShowcase from './images/Showcase/mtb-showcase.jpg'
 import skiShowcase from './images/Showcase/ski-showcase.jpg'
 
 function Home() {
+  useEffect(() => {
+    document.title = 'Joe Owen | Home'
+  }, [])
+
   return ( 
     <div id="showcase" className="showcase">
       <h1>Photography</h1>

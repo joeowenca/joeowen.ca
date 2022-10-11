@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Routes, Route, Link } from "react-router-dom"
+import { Routes, Route, Link, useLocation } from "react-router-dom"
 
 import sportsImage from './images/Photography Categories/sports.jpg'
 import automotiveImage from './images/Photography Categories/automotive.jpg'
@@ -19,6 +19,24 @@ let Photography = (props) => {
     const [index, setIndex] = useState(0)
     const [images, setImages] = useState()
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+    const location = useLocation().pathname
+
+    useEffect(() => {
+        function handleResize() {
+            setScreenWidth(window.innerWidth)
+        }
+      
+        window.addEventListener('resize', handleResize)
+
+        return _ => {
+            window.removeEventListener('resize', handleResize)
+        }
+    })
+
+    useEffect(() => {
+        if (location == '/photography')
+            document.title = 'Joe Owen | Photography'
+    }, [location])
 
     let showLightbox = (index, images) => {
         setLightbox(true)
@@ -33,18 +51,6 @@ let Photography = (props) => {
         props.setNav(false)
         document.body.setAttribute("style", "overflow-y: auto; -webkit-overflow-scrolling: touch;")
     }
-
-    useEffect(() => {
-        function handleResize() {
-            setScreenWidth(window.innerWidth)
-        }
-      
-        window.addEventListener('resize', handleResize)
-
-        return _ => {
-            window.removeEventListener('resize', handleResize)
-        }
-    })
 
     return (
         <div className="content">
