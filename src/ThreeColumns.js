@@ -13,6 +13,10 @@ let ThreeColumns = (props) => {
                             return (
                                 <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
                             )
+                        } else {
+                            return (
+                                <></>
+                            )
                         }
                     })
                 }
@@ -25,6 +29,10 @@ let ThreeColumns = (props) => {
                             return (
                                 <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
                             )
+                        } else {
+                            return (
+                                <></>
+                            )
                         }
                     })
                 }
@@ -36,6 +44,10 @@ let ThreeColumns = (props) => {
                         if ((index + 1) % 3 === 0) {
                             return (
                                 <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
+                            )
+                        } else {
+                            return (
+                                <></>
                             )
                         }
                     })

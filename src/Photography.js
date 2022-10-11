@@ -92,23 +92,23 @@ let Photography = (props) => {
                     <Route exact path="/" element={
                             <>
                                 <h1>Photography</h1>
-                                <img src={sportsImage} className="photography-category"></img>
+                                <img src={sportsImage} className="photography-category" alt="sports category"></img>
                                 <h2>Sports</h2>
                                 <button className="view-more"><Link to="/photography/sports">View More</Link></button>
 
-                                <img src={automotiveImage} className="photography-category"></img>
+                                <img src={automotiveImage} className="photography-category" alt="automotive category"></img>
                                 <h2>Automotive</h2>
                                 <button className="view-more"><Link to="/photography/automotive">View More</Link></button>
 
-                                <img src={natureImage} className="photography-category"></img>
+                                <img src={natureImage} className="photography-category" alt="nature category"></img>
                                 <h2>Nature</h2>
                                 <button className="view-more"><Link to="/photography/nature">View More</Link></button>
 
-                                <img src={portraitsImage} className="photography-category"></img>
+                                <img src={portraitsImage} className="photography-category" alt="portraits category"></img>
                                 <h2>Portraits</h2>
                                 <button className="view-more"><Link to="/photography/portraits">View More</Link></button>
 
-                                <img src={miscImage} className="photography-category"></img>
+                                <img src={miscImage} className="photography-category"alt="misc category"></img>
                                 <h2>Misc</h2>
                                 <button className="view-more"><Link to="/photography/misc">View More</Link></button>
                             </>

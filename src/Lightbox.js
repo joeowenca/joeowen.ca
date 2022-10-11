@@ -3,7 +3,7 @@ import LightboxImage from './LightboxImage'
 
 let Lightbox = (props) => {
 
-    const {images} = props
+    const {images, index} = props
 
     const [imageInView, setImageInView] = useState(5)
 
@@ -14,10 +14,10 @@ let Lightbox = (props) => {
     }
 
     useEffect(() => {
-        document.querySelector('#img-' + props.index).scrollIntoView({
+        document.querySelector('#img-' + index).scrollIntoView({
             inline: 'start'
         })
-    }, [])
+    }, [index])
 
     return (
         <div className="lightbox">

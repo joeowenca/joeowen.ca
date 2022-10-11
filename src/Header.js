@@ -16,7 +16,7 @@ function Header() {
         }
 
         window.scrollTo(0,0);
-    })
+    }, [location.pathname])
 
     return (
         <div id="header" className="header" onClick={() => ChangeColor()} style={home ? {} : {backgroundColor: "#1A1A1A"}} >

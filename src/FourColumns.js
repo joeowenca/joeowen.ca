@@ -13,6 +13,10 @@ let FourColumns = (props) => {
                             return (
                                 <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
                             )
+                        } else {
+                            return (
+                                <></>
+                            )
                         }
                     })
                 }
@@ -24,6 +28,10 @@ let FourColumns = (props) => {
                         if ((index + 3) % 4 === 0) {
                             return (
                                 <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
+                            )
+                        } else {
+                            return (
+                                <></>
                             )
                         }
                     })
@@ -37,6 +45,10 @@ let FourColumns = (props) => {
                             return (
                                 <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
                             )
+                        } else {
+                            return (
+                                <></>
+                            )
                         }
                     })
                 }
@@ -48,6 +60,10 @@ let FourColumns = (props) => {
                         if ((index + 1) % 4 === 0) {
                             return (
                                 <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
+                            )
+                        } else {
+                            return (
+                                <></>
                             )
                         }
                     })

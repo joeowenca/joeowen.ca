@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 let TwoColumns = (props) => {
     
@@ -13,6 +14,10 @@ let TwoColumns = (props) => {
                             return (
                                 <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
                             )
+                        } else {
+                            return (
+                                <React.Fragment key={uuidv4()}></React.Fragment>
+                            )
                         }
                     })
                 }
@@ -24,6 +29,10 @@ let TwoColumns = (props) => {
                         if ((index + 1) % 2 === 0) {
                             return (
                                 <img src={value.default} onClick={() => showLightbox(index, images)} className="thumbnail" key={index} alt="" />
+                            )
+                        } else {
+                            return (
+                                <React.Fragment key={uuidv4()}></React.Fragment>
                             )
                         }
                     })
