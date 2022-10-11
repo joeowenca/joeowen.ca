@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/joeowen.ca/static/css/main.ffbf1bff.chunk.css",
-    "main.js": "/joeowen.ca/static/js/main.6b179d61.chunk.js",
-    "main.js.map": "/joeowen.ca/static/js/main.6b179d61.chunk.js.map",
+    "main.js": "/joeowen.ca/static/js/main.3af923e7.chunk.js",
+    "main.js.map": "/joeowen.ca/static/js/main.3af923e7.chunk.js.map",
     "runtime-main.js": "/joeowen.ca/static/js/runtime-main.fa203e4b.js",
     "runtime-main.js.map": "/joeowen.ca/static/js/runtime-main.fa203e4b.js.map",
-    "static/js/2.228695a4.chunk.js": "/joeowen.ca/static/js/2.228695a4.chunk.js",
-    "static/js/2.228695a4.chunk.js.map": "/joeowen.ca/static/js/2.228695a4.chunk.js.map",
+    "static/js/2.2f921797.chunk.js": "/joeowen.ca/static/js/2.2f921797.chunk.js",
+    "static/js/2.2f921797.chunk.js.map": "/joeowen.ca/static/js/2.2f921797.chunk.js.map",
     "index.html": "/joeowen.ca/index.html",
     "static/css/main.ffbf1bff.chunk.css.map": "/joeowen.ca/static/css/main.ffbf1bff.chunk.css.map",
-    "static/js/2.228695a4.chunk.js.LICENSE.txt": "/joeowen.ca/static/js/2.228695a4.chunk.js.LICENSE.txt",
+    "static/js/2.2f921797.chunk.js.LICENSE.txt": "/joeowen.ca/static/js/2.2f921797.chunk.js.LICENSE.txt",
     "static/media/001.jpg": "/joeowen.ca/static/media/001.26c5174f.jpg",
     "static/media/002.jpg": "/joeowen.ca/static/media/002.ab532b64.jpg",
     "static/media/003.jpg": "/joeowen.ca/static/media/003.fe9520ec.jpg",
@@ -97,8 +97,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.fa203e4b.js",
-    "static/js/2.228695a4.chunk.js",
+    "static/js/2.2f921797.chunk.js",
     "static/css/main.ffbf1bff.chunk.css",
-    "static/js/main.6b179d61.chunk.js"
+    "static/js/main.3af923e7.chunk.js"
   ]
 }
