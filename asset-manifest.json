@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/joeowen.ca/static/css/main.7c07c41b.chunk.css",
-    "main.js": "/joeowen.ca/static/js/main.7e30fdf1.chunk.js",
-    "main.js.map": "/joeowen.ca/static/js/main.7e30fdf1.chunk.js.map",
+    "main.css": "/joeowen.ca/static/css/main.29bbf624.chunk.css",
+    "main.js": "/joeowen.ca/static/js/main.93ea5e6d.chunk.js",
+    "main.js.map": "/joeowen.ca/static/js/main.93ea5e6d.chunk.js.map",
     "runtime-main.js": "/joeowen.ca/static/js/runtime-main.fa203e4b.js",
     "runtime-main.js.map": "/joeowen.ca/static/js/runtime-main.fa203e4b.js.map",
     "static/js/2.4f56eefd.chunk.js": "/joeowen.ca/static/js/2.4f56eefd.chunk.js",
     "static/js/2.4f56eefd.chunk.js.map": "/joeowen.ca/static/js/2.4f56eefd.chunk.js.map",
     "index.html": "/joeowen.ca/index.html",
-    "static/css/main.7c07c41b.chunk.css.map": "/joeowen.ca/static/css/main.7c07c41b.chunk.css.map",
+    "static/css/main.29bbf624.chunk.css.map": "/joeowen.ca/static/css/main.29bbf624.chunk.css.map",
     "static/js/2.4f56eefd.chunk.js.LICENSE.txt": "/joeowen.ca/static/js/2.4f56eefd.chunk.js.LICENSE.txt",
     "static/media/001.jpg": "/joeowen.ca/static/media/001.26c5174f.jpg",
     "static/media/002.jpg": "/joeowen.ca/static/media/002.ab532b64.jpg",
@@ -83,22 +83,22 @@
     "static/media/DSC9842.jpg": "/joeowen.ca/static/media/DSC9842.1ee6f237.jpg",
     "static/media/automotive-showcase.9d4005d4.jpg": "/joeowen.ca/static/media/automotive-showcase.9d4005d4.jpg",
     "static/media/automotive.83c457a0.jpg": "/joeowen.ca/static/media/automotive.83c457a0.jpg",
-    "static/media/intro-styles-mobile.css": "/joeowen.ca/static/media/background-portrait.5164eada.jpg",
     "static/media/styles.css": "/joeowen.ca/static/media/icomoon.ea09a71e.svg",
+    "static/media/intro-styles-mobile.css": "/joeowen.ca/static/media/background-portrait-3.2580325b.jpg",
     "static/media/landscape-showcase.fc52b89d.jpg": "/joeowen.ca/static/media/landscape-showcase.fc52b89d.jpg",
     "static/media/misc.86940569.jpg": "/joeowen.ca/static/media/misc.86940569.jpg",
     "static/media/mtb-showcase.dbe29097.jpg": "/joeowen.ca/static/media/mtb-showcase.dbe29097.jpg",
     "static/media/nature.7640c15a.jpg": "/joeowen.ca/static/media/nature.7640c15a.jpg",
     "static/media/portrait-showcase.7d8d14c9.jpg": "/joeowen.ca/static/media/portrait-showcase.7d8d14c9.jpg",
     "static/media/portraits.14be35c1.jpg": "/joeowen.ca/static/media/portraits.14be35c1.jpg",
-    "static/media/profile-picture-header-2.f4fb8d40.jpg": "/joeowen.ca/static/media/profile-picture-header-2.f4fb8d40.jpg",
+    "static/media/profile-picture-header.d49d9930.jpg": "/joeowen.ca/static/media/profile-picture-header.d49d9930.jpg",
     "static/media/ski-showcase.ebbf570f.jpg": "/joeowen.ca/static/media/ski-showcase.ebbf570f.jpg",
     "static/media/sports.8c6c132f.jpg": "/joeowen.ca/static/media/sports.8c6c132f.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.fa203e4b.js",
     "static/js/2.4f56eefd.chunk.js",
-    "static/css/main.7c07c41b.chunk.css",
-    "static/js/main.7e30fdf1.chunk.js"
+    "static/css/main.29bbf624.chunk.css",
+    "static/js/main.93ea5e6d.chunk.js"
   ]
 }
