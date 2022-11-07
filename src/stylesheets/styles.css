@@ -114,3 +114,62 @@ a {
   border: none;
   padding: 10px 15px;
 }
+
+.splashscreen {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .splashscreen {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/background-landscape.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+  }
+
+  .splashscreen img {
+    display: inline-block;
+    width: 200px;
+    border-radius: 200px;
+    vertical-align: middle;
+  }
+
+  .splashscreen h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+    font-size: 64pt;
+  }
+
+  .splashscreen span {
+    position: relative;
+    top: 8px;
+    font-family: 'Source Sans Pro', sans-serif;
+    vertical-align: text-top;
+    font-size: 24pt;
+    font-weight: 200;
+    margin-left: 10px;
+  }
+
+  .splashscreen p {
+    font-size: 16pt;
+    margin-top: 15%;
+    text-align: center;
+  }
+}

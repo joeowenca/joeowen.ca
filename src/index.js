@@ -5,6 +5,7 @@ import ScrollTransition from './ScrollTransition'
 import ChangeColor from './ChangeColor'
 import Header from './Header'
 import App from './App'
+import Splashscreen from './Splashscreen'
 
 import './stylesheets/styles.css'
 import './stylesheets/header-styles-mobile.css'
@@ -22,8 +23,11 @@ document.body.onscroll = function() {ScrollTransition()}
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
-      <Header />
-      <App />
+      <Splashscreen />
+      <div className="mobile-only">
+        <Header />
+        <App />
+      </div>
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
