@@ -4,6 +4,9 @@ import { Link, useLocation } from 'react-router-dom'
 import pfp from '../../images/profile-picture.jpg'
 import ChangeColor from '../../ChangeColor'
 
+// Stylesheets
+import './stylesheets/header-styles-mobile.css'
+
 function Header() {
     const location = useLocation()
     const [home, setHome] = useState(false)

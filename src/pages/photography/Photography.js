@@ -16,6 +16,9 @@ import Portraits from './categories/Portraits'
 import Misc from './categories/Misc'
 import Lightbox from './lightbox/Lightbox'
 
+// Stylesheets
+import './stylesheets/photography-gallery.css'
+
 let Photography = (props) => {
     const [lightbox, setLightbox] = useState(false)
     const [index, setIndex] = useState(0)

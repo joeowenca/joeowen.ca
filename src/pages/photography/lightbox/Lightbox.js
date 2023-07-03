@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import LightboxImage from './LightboxImage'
 
+// Stylehsheets
+import './stylesheets/lightbox.css'
+
 let Lightbox = (props) => {
 
     const {images, index} = props

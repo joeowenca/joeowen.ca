@@ -1,3 +1,6 @@
+// Stylesheets
+import './stylesheets/footer-styles-mobile.css'
+
 function Footer() {
     return (
         <div className="footer">

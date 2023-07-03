@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 
 import ChangeColor from '../../ChangeColor'
 
+// Stylesheets
+import './stylesheets/navmenu-styles-mobile.css'
+
 let NavMenu = (props) => {
     const [menu, setMenu] = useState(false)
 
