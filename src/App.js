@@ -7,7 +7,7 @@ import Home from './pages/home/Home'
 import Intro from './pages/home/Intro'
 import Photography from './pages/photography/Photography'
 import Videos from './Videos'
-import Music from './Music'
+import Music from './pages/music/Music'
 import Projects from './Projects'
 
 function App() {
