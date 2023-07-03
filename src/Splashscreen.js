@@ -1,5 +1,5 @@
 import React from 'react'
-import pfp from './images/profile-picture-header.jpg'
+import pfp from './images/profile-picture.jpg'
 
 let Splashscreen = () => {
 

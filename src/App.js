@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Routes, Route } from "react-router-dom"
   
-import NavMenu from './NavMenu'
+import NavMenu from './components/navigation/NavMenu'
 import Footer from './Footer'
-import Home from './Home'
-import Intro from './Intro'
+import Home from './pages/home/Home'
+import Intro from './pages/home/Intro'
 import Photography from './Photography'
 import Videos from './Videos'
 import Music from './Music'

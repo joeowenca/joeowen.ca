@@ -1,4 +1,7 @@
-import pfp from './images/profile-picture-header.jpg'
+import pfp from '../../images/profile-picture.jpg'
+
+// Stylesheets
+import './stylesheets/intro-styles-mobile.css'
 
 function Intro() {
     return (

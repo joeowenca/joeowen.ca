@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import ChangeColor from './ChangeColor'
+import ChangeColor from '../../ChangeColor'
 
 let NavMenu = (props) => {
     const [menu, setMenu] = useState(false)

@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react'
 
-import landscapeShowcase from './images/Showcase/landscape-showcase.jpg'
-import portraitShowcase from './images/Showcase/portrait-showcase.jpg'
-import automotiveShowcase from './images/Showcase/automotive-showcase.jpg'
-import mtbShowcase from './images/Showcase/mtb-showcase.jpg'
-import skiShowcase from './images/Showcase/ski-showcase.jpg'
+// Stylesheets
+import './stylesheets/homepagecontent-styles-mobile.css'
+
+// Images
+import landscapeShowcase from './images/showcase/landscape-showcase.jpg'
+import portraitShowcase from './images/showcase/portrait-showcase.jpg'
+import automotiveShowcase from './images/showcase/automotive-showcase.jpg'
+import mtbShowcase from './images/showcase/mtb-showcase.jpg'
+import skiShowcase from './images/showcase/ski-showcase.jpg'
 
 function Home() {
   useEffect(() => {
