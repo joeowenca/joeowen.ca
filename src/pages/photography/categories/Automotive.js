@@ -1,22 +1,22 @@
 import React, { useEffect } from 'react'
-import images from './images/Sports/index.js'
-import TwoColumns from './TwoColumns'
-import ThreeColumns from './ThreeColumns'
-import FourColumns from './FourColumns'
+import images from '../images/categories/automotive/index.js'
+import TwoColumns from '../layout/TwoColumns.js'
+import ThreeColumns from '../layout/ThreeColumns.js'
+import FourColumns from '../layout/FourColumns.js'
 
-let Nature = (props) => {
+let Automotive = (props) => {
 
     const {screenWidth, showLightbox} = props
 
     useEffect(() => {
-        document.title = 'Joe Owen | Nature'
+        document.title = 'Joe Owen | Automotive'
     }, [])
 
     return (
         <>
             <div className="gallery">
                 <div className="gallery-header">
-                    <h1>Nature</h1>
+                    <h1>Automotive</h1>
                 </div>
                 {screenWidth > 0 && screenWidth < 540 ? 
                     <TwoColumns images={images} showLightbox={showLightbox} />
@@ -34,4 +34,4 @@ let Nature = (props) => {
     )
 }
 
-export default Nature
+export default Automotive

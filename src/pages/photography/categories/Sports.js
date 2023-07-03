@@ -1,22 +1,22 @@
 import React, { useEffect } from 'react'
-import images from './images/Sports/index.js'
-import TwoColumns from './TwoColumns'
-import ThreeColumns from './ThreeColumns'
-import FourColumns from './FourColumns'
+import images from '../images/categories/sports/index.js'
+import TwoColumns from '../layout/TwoColumns.js'
+import ThreeColumns from '../layout/ThreeColumns.js'
+import FourColumns from '../layout/FourColumns.js'
 
-let Portraits = (props) => {
+let Sports = (props) => {
 
     const {screenWidth, showLightbox} = props
 
     useEffect(() => {
-        document.title = 'Joe Owen | Portraits'
+        document.title = 'Joe Owen | Sports'
     }, [])
 
     return (
         <>
             <div className="gallery">
                 <div className="gallery-header">
-                    <h1>Portraits</h1>
+                    <h1>Sports</h1>
                 </div>
                 {screenWidth > 0 && screenWidth < 540 ? 
                     <TwoColumns images={images} showLightbox={showLightbox} />
@@ -34,4 +34,4 @@ let Portraits = (props) => {
     )
 }
 
-export default Portraits
+export default Sports
