@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import pfp from '../../images/profile-picture.jpg'
-import ChangeColor from '../../ChangeColor'
+import ChangeColor from '../../scripts/ChangeColor'
 
 // Stylesheets
 import './stylesheets/header-styles-mobile.css'

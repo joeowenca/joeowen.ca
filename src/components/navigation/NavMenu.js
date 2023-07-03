@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import ChangeColor from '../../ChangeColor'
+import ChangeColor from '../../scripts/ChangeColor'
 
 // Stylesheets
 import './stylesheets/navmenu-styles-mobile.css'

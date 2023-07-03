@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import { HashRouter } from 'react-router-dom'
 
 // Components
-import ScrollTransition from './ScrollTransition'
-import ChangeColor from './ChangeColor'
+import ScrollTransition from './scripts/ScrollTransition'
+import ChangeColor from './scripts/ChangeColor'
 import Header from './components/header/Header'
 import App from './App'
 import Splashscreen from './Splashscreen'
