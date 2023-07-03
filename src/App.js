@@ -8,7 +8,7 @@ import Intro from './pages/home/Intro'
 import Photography from './pages/photography/Photography'
 import Videos from './pages/videos/Videos'
 import Music from './pages/music/Music'
-import Projects from './Projects'
+import Projects from './pages/projects/Projects'
 
 function App() {
     const [nav, setNav] = useState(false)
