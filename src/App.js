@@ -6,7 +6,7 @@ import Footer from './components/footer/Footer'
 import Home from './pages/home/Home'
 import Intro from './pages/home/Intro'
 import Photography from './pages/photography/Photography'
-import Videos from './Videos'
+import Videos from './pages/videos/Videos'
 import Music from './pages/music/Music'
 import Projects from './Projects'
 
