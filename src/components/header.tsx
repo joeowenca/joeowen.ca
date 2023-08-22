@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import profilePicture from "../../public/profile picture.jpg";
 
+
 export default function Header() {
   return (
     <div className="fixed flex items-center w-screen max-h-20 p-3">
