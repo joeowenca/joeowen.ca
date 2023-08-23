@@ -13,7 +13,7 @@ export default function Introduction() {
   `;
 
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center outline outline-1">
+    <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center -z-10">
       <div className="p-5">
         <h2 className="text-center font-serif text-2xl">Joe Owen</h2>
         <div className="max-w-prose p-5">
@@ -21,6 +21,7 @@ export default function Introduction() {
           <pre className="font-sans whitespace-normal">{introTextCollaborate}</pre>
         </div>
       </div>
+      <pre className="fixed bottom-5 font-sans">{"Scroll to view more"}</pre>
     </div>
   )
 }
