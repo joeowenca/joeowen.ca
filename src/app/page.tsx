@@ -1,3 +1,5 @@
+import Header from "@/components/header";
+
 export default function Home() {
   const introTextSummary = `
     Welcome!
@@ -13,11 +15,14 @@ export default function Home() {
   `;
 
   return (
-    <main className=" flex justify-center p-5 pt-20">
-      <div className="p-5">
-        <pre className="pb-5 font-sans">{introTextSummary}</pre>
-        <pre className="pb-5 font-sans">{introTextCollaborate}</pre>
-      </div>
-    </main>
+    <>
+      <Header />
+      <main className=" flex justify-center p-5 pt-20">
+        <div className="p-5">
+          <pre className="pb-5 font-sans">{introTextSummary}</pre>
+          <pre className="pb-5 font-sans">{introTextCollaborate}</pre>
+        </div>
+      </main>
+    </>
   )
 }
