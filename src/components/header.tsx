@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import profilePicture from "../../public/profile picture.jpg";
+import profilePicture from "../../public/profile-picture.jpg";
 
 
 export default function Header() {
