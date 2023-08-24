@@ -30,7 +30,7 @@ export default function Showcase() {
   )
 }
 
-interface ShowcaseItemProps {
+type ShowcaseItemProps = {
   title: string;
   children: string;
 }
