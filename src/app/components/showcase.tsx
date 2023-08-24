@@ -1,9 +1,7 @@
-import React, { FC } from 'react';
-
 export default function Showcase() {
   return (
     <div className="flex justify-center p-5 mt-[100vh] bg-black">
-      <div className="max-w-prose">
+      <div className="flex-1 max-w-prose">
         <h1 className="p-3 text-center font-serif text-2xl">{"Photography"}</h1>
         <ShowcaseItem title="Sports">
           This will become a description for sports photography
