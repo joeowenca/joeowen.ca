@@ -17,7 +17,7 @@ export default function Introduction() {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center -z-10 bg-vertical bg-cover bg-center">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center p-3">
         <Image
           src={profilePicture}
           alt="Profile picture"
@@ -40,6 +40,6 @@ type IntroParagraphProps = {
 
 function IntroParagraph({ children }:IntroParagraphProps ) {
   return (
-    <pre className="pb-5 font-sans whitespace-normal">{children}</pre>
+    <pre className="p-2 mb-3 font-sans whitespace-normal bg-black/75">{children}</pre>
   )
 }
