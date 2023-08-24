@@ -4,7 +4,7 @@ import profilePicture from "../../public/profile-picture.jpg";
 
 export default function Header() {
   return (
-    <div className="fixed top-0 left-0 flex items-center w-screen max-h-20 p-3 bg-black z-50">
+    <div className="fixed flex items-center w-screen max-h-20 p-3 bg-black z-50">
       <div className="flex items-center">
         <Image
           src={profilePicture}
