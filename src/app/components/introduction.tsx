@@ -16,7 +16,7 @@ export default function Introduction() {
   `;
 
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center -z-10">
+    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center -z-10">
       <div className="flex flex-col items-center">
         <Image
           src={profilePicture}
