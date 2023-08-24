@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import profilePicture from "../../../public/profile-picture.jpg";
+
 export default function Introduction() {
   const introTextSummary = `
     Welcome!
@@ -14,9 +17,14 @@ export default function Introduction() {
 
   return (
     <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center -z-10">
-      <div className="p-5">
-        <h2 className="text-center font-serif text-2xl">Joe Owen</h2>
-        <div className="max-w-prose p-5">
+      <div className="flex flex-col items-center">
+        <Image
+          src={profilePicture}
+          alt="Profile picture"
+          className="rounded-full w-28"
+        />
+        <h2 className="p-5 font-serif text-2xl">Joe Owen</h2>
+        <div className="max-w-prose">
           <pre className="pb-5 font-sans whitespace-normal">{introTextSummary}</pre>
           <pre className="font-sans whitespace-normal">{introTextCollaborate}</pre>
         </div>
