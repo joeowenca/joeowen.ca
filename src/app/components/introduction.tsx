@@ -25,11 +25,21 @@ export default function Introduction() {
         />
         <h2 className="p-5 font-serif text-2xl">Joe Owen</h2>
         <div className="max-w-prose">
-          <pre className="pb-5 font-sans whitespace-normal">{introTextSummary}</pre>
-          <pre className="font-sans whitespace-normal">{introTextCollaborate}</pre>
+          <IntroParagraph>{introTextSummary}</IntroParagraph>
+          <IntroParagraph>{introTextCollaborate}</IntroParagraph>
         </div>
       </div>
       <pre className="fixed bottom-5 font-sans">{"Scroll to view more"}</pre>
     </div>
+  )
+}
+
+type IntroParagraphProps = {
+  children: string;
+}
+
+function IntroParagraph({ children }:IntroParagraphProps ) {
+  return (
+    <pre className="pb-5 font-sans whitespace-normal">{children}</pre>
   )
 }
