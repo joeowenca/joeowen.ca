@@ -23,7 +23,7 @@ export default function Introduction() {
 					alt="Profile picture"
 					className="rounded-full w-28"
 				/>
-				<h2 className="p-5 font-serif text-2xl">Joe Owen</h2>
+				<h2 className="p-3 font-serif text-2xl text-black">Joe Owen</h2>
 				<div className="max-w-prose">
 					<IntroParagraph>{introTextSummary}</IntroParagraph>
 					<IntroParagraph>{introTextCollaborate}</IntroParagraph>
