@@ -1,45 +1,49 @@
 import Image from 'next/image';
-import profilePicture from "../../../public/profile-picture.jpg";
+import profilePicture from '../../../public/profile-picture.jpg';
 
 export default function Introduction() {
-  const introTextSummary = `
+	const introTextSummary = `
     Welcome!
     This website is a place for me to share all of my creative work.
     I'm a photographer, video creator, musician, and software developer.
     Feel free to take a look around and I hope you'll like what you see.
   `;
 
-  const introTextCollaborate = `
+	const introTextCollaborate = `
     Always happy to work with people.
     If you're interested in partering or have any questions,
     you can find my email at the bottom of this page.
   `;
 
-  return (
-    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center -z-10 bg-vertical lg:bg-horizontal bg-cover bg-center">
-      <div className="flex flex-col items-center p-3">
-        <Image
-          src={profilePicture}
-          alt="Profile picture"
-          className="rounded-full w-28"
-        />
-        <h2 className="p-5 font-serif text-2xl">Joe Owen</h2>
-        <div className="max-w-prose">
-          <IntroParagraph>{introTextSummary}</IntroParagraph>
-          <IntroParagraph>{introTextCollaborate}</IntroParagraph>
-        </div>
-      </div>
-      <pre className="fixed bottom-5 font-sans">{"Scroll to view more"}</pre>
-    </div>
-  )
+	return (
+		<div className="fixed top-0 left-0 w-full h-full flex items-center justify-center -z-10 bg-vertical lg:bg-horizontal bg-cover bg-center">
+			<div className="flex flex-col items-center p-3">
+				<Image
+					src={profilePicture}
+					alt="Profile picture"
+					className="rounded-full w-28"
+				/>
+				<h2 className="p-5 font-serif text-2xl">Joe Owen</h2>
+				<div className="max-w-prose">
+					<IntroParagraph>{introTextSummary}</IntroParagraph>
+					<IntroParagraph>{introTextCollaborate}</IntroParagraph>
+				</div>
+			</div>
+			<pre className="fixed bottom-5 font-sans">
+				{'Scroll to view more'}
+			</pre>
+		</div>
+	);
 }
 
 type IntroParagraphProps = {
-  children: string;
-}
+	children: string;
+};
 
-function IntroParagraph({ children }:IntroParagraphProps ) {
-  return (
-    <pre className="p-2 mb-3 font-sans whitespace-normal bg-black/75">{children}</pre>
-  )
+function IntroParagraph({ children }: IntroParagraphProps) {
+	return (
+		<pre className="p-2 mb-3 font-sans whitespace-normal bg-black/75">
+			{children}
+		</pre>
+	);
 }
