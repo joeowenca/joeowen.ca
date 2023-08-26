@@ -1,4 +1,4 @@
-export default function calculateScrollAlpha() {
+export default function calculateScrollAlpha():string {
   return Math.min(
     window.scrollY / (window.innerHeight / 3),
     1,
