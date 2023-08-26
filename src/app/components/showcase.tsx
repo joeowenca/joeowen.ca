@@ -3,9 +3,18 @@ import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
 
 export default function Showcase() {
 	const [alpha, setAlpha] = useState('0.00');
+	const [hidden, setHidden] = useState(true);
 
 	function handleScroll() {
-		setAlpha(calculateScrollAlpha);
+		let scrollAlpha: string = calculateScrollAlpha();
+
+		if (scrollAlpha === '0.00') {
+			setHidden(true);
+		} else {
+			setHidden(false);
+		}
+
+		setAlpha(scrollAlpha);
 	}
 
 	useEffect(() => {
@@ -18,7 +27,9 @@ export default function Showcase() {
 
 	return (
 		<div
-			className="flex justify-center p-3 pt-[100vh]"
+			className={`flex justify-center p-3 ${
+				hidden ? 'mt-[100vh]' : 'pt-[100vh]'
+			}`}
 			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})` }}
 		>
 			<div className="flex-1 max-w-prose">
