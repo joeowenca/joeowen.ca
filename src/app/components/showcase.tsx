@@ -1,6 +1,26 @@
+import { useEffect, useState } from 'react';
+import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
+
 export default function Showcase() {
+	const [alpha, setAlpha] = useState('0.00');
+
+	function handleScroll() {
+		setAlpha(calculateScrollAlpha);
+	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
-		<div className="flex justify-center p-5 mt-[100vh] bg-black">
+		<div
+			className="flex justify-center p-3 pt-[100vh]"
+			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})` }}
+		>
 			<div className="flex-1 max-w-prose">
 				<h1 className="p-3 text-center font-serif text-2xl">
 					{'Photography'}
