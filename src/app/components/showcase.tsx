@@ -59,7 +59,7 @@ type ShowcaseItemProps = {
 
 function ShowcaseItem({ title, children }: ShowcaseItemProps) {
 	return (
-		<section className="pb-3">
+		<section className="p-2 pb-3">
 			<h2 className="font-serif text-xl">{title}</h2>
 			<pre className="font-sans whitespace-normal">{children}</pre>
 		</section>
