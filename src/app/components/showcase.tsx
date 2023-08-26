@@ -6,15 +6,8 @@ export default function Showcase() {
 	const [hidden, setHidden] = useState(true);
 
 	function handleScroll() {
-		let scrollAlpha: string = calculateScrollAlpha();
-
-		if (scrollAlpha === '0.00') {
-			setHidden(true);
-		} else {
-			setHidden(false);
-		}
-
-		setAlpha(scrollAlpha);
+		setHidden(calculateScrollAlpha() === '0.00');
+		setAlpha(calculateScrollAlpha());
 	}
 
 	useEffect(() => {
