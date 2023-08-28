@@ -1,6 +1,9 @@
-export default function calculateScrollAlpha():string {
-  return Math.min(
-    window.scrollY / (window.innerHeight / 3),
+export default function calculateScrollAlpha():number {
+  const threshold = 3;
+  const scrollAlpha = Math.min(
+    window.scrollY / (window.innerHeight / threshold),
     1,
-  ).toFixed(2);
+  );
+
+  return parseFloat(scrollAlpha.toFixed(2));
 }

@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
 
 export default function Showcase() {
-	const [alpha, setAlpha] = useState('0.00');
+	const [alpha, setAlpha] = useState(0);
 	const [hidden, setHidden] = useState(true);
 
 	function handleScroll() {
-		setHidden(calculateScrollAlpha() === '0.00');
+		setHidden(calculateScrollAlpha() === 0);
 		setAlpha(calculateScrollAlpha());
 	}
 
