@@ -3,10 +3,8 @@ import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
 
 export default function Showcase() {
 	const [alpha, setAlpha] = useState(0);
-	const [hidden, setHidden] = useState(true);
 
 	function handleScroll() {
-		setHidden(calculateScrollAlpha() === 0);
 		setAlpha(calculateScrollAlpha());
 	}
 
@@ -21,7 +19,7 @@ export default function Showcase() {
 	return (
 		<div
 			className={`flex justify-center p-3 ${
-				hidden ? 'mt-[100vh]' : 'pt-[100vh]'
+				calculateScrollAlpha() === 0 ? 'mt-[100vh]' : 'pt-[100vh]'
 			}`}
 			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})` }}
 		>
