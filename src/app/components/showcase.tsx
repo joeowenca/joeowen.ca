@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
 
