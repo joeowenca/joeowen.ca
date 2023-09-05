@@ -11,6 +11,8 @@ export default function Showcase() {
 	}
 
 	useEffect(() => {
+		setAlpha(calculateScrollAlpha());
+
 		window.addEventListener('scroll', handleScroll);
 
 		return () => {
@@ -21,7 +23,7 @@ export default function Showcase() {
 	return (
 		<div
 			className={`flex justify-center p-3 ${
-				calculateScrollAlpha() === 0 ? 'mt-[100vh]' : 'pt-[100vh]'
+				alpha === 0 ? 'mt-[100vh]' : 'pt-[100vh]'
 			}`}
 			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})` }}
 		>
