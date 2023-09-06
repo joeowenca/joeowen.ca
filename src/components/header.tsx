@@ -23,7 +23,11 @@ export default function Header() {
 	}, []);
 
 	return (
-		<div className="fixed top-0 left-0 flex items-center w-screen max-h-20 p-3 bg-black z-50">
+		<div
+			className={`fixed top-0 left-0 flex items-center w-screen max-h-20 p-3 z-50 ${
+				color === 255 ? 'bg-black' : ''
+			}`}
+		>
 			<div className="flex items-center">
 				<Image
 					src={profilePicture}
