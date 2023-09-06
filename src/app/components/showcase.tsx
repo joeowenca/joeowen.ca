@@ -1,6 +1,32 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
+
 export default function Showcase() {
+	const [alpha, setAlpha] = useState(0);
+
+	function handleScroll() {
+		setAlpha(calculateScrollAlpha());
+	}
+
+	useEffect(() => {
+		setAlpha(calculateScrollAlpha());
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
-		<div className="flex justify-center p-5 mt-[100vh] bg-black">
+		<div
+			className={`flex justify-center p-3 ${
+				alpha === 0 ? 'mt-[100vh]' : 'pt-[100vh]'
+			}`}
+			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})` }}
+		>
 			<div className="flex-1 max-w-prose">
 				<h1 className="p-3 text-center font-serif text-2xl">
 					{'Photography'}
@@ -39,7 +65,7 @@ type ShowcaseItemProps = {
 
 function ShowcaseItem({ title, children }: ShowcaseItemProps) {
 	return (
-		<section className="pb-3">
+		<section className="p-2 pb-3">
 			<h2 className="font-serif text-xl">{title}</h2>
 			<pre className="font-sans whitespace-normal">{children}</pre>
 		</section>
