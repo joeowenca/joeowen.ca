@@ -5,7 +5,11 @@ import Image from 'next/image';
 import profilePicture from '../../public/profile-picture.jpg';
 import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
 
-export default function Header() {
+type HeaderProps = {
+	page: string;
+};
+
+export default function Header({ page }: HeaderProps) {
 	const [color, setColor] = useState(0);
 
 	function handleScroll() {
@@ -13,6 +17,11 @@ export default function Header() {
 	}
 
 	useEffect(() => {
+		if (page !== 'home') {
+			setColor(255);
+			return;
+		}
+
 		setColor(calculateScrollAlpha() * 255);
 
 		window.addEventListener('scroll', handleScroll);
