@@ -21,7 +21,24 @@ export default function Navigation({ color }: NavigationProps) {
 					<NavLink page="/music">Music</NavLink>
 					<NavLink page="/projects">Projects</NavLink>
 				</div>
-				<div className="ml-auto">Socials links</div>
+				<div className="flex pr-6 absolute right-0">
+					<SocialLink
+						icon="instagram"
+						link="https://www.instagram.com/joeowen.ca/"
+					/>
+					<SocialLink
+						icon="youtube"
+						link="https://www.youtube.com/channel/UC-yxAw4mE3ZfLfRlolRmUSA"
+					/>
+					<SocialLink
+						icon="soundcloud"
+						link="https://soundcloud.com/sas-areku"
+					/>
+					<SocialLink
+						icon="github"
+						link="https://github.com/Sas-Areku"
+					/>
+				</div>
 			</div>
 		</>
 	);
@@ -42,9 +59,24 @@ function NavLink({ children, page }: NavLinkProps) {
 	return (
 		<div
 			className={`p-2 text-lg hover:opacity-100 transition-opacity
-		${active ? 'opacity-100' : 'opacity-50'}`}
+		${active ? 'opacity-100' : 'opacity-75'}`}
 		>
 			<Link href={page}>{children}</Link>
 		</div>
+	);
+}
+
+type SocialLinkProps = {
+	icon: string;
+	link: string;
+};
+
+function SocialLink({ icon, link }: SocialLinkProps) {
+	return (
+		<a href={link} target="_blank">
+			<div
+				className={`p-1.5 opacity-75 hover:opacity-100 icon-${icon}`}
+			></div>
+		</a>
 	);
 }
