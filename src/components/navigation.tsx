@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 type NavigationProps = {
@@ -13,10 +16,10 @@ export default function Navigation({ color }: NavigationProps) {
 			>
 				<div className="flex -translate-x-1/2">
 					<NavLink page="/">Home</NavLink>
-					<NavLink page="photography">Photography</NavLink>
-					<NavLink page="videos">Videos</NavLink>
-					<NavLink page="music">Music</NavLink>
-					<NavLink page="projects">Projects</NavLink>
+					<NavLink page="/photography">Photography</NavLink>
+					<NavLink page="/videos">Videos</NavLink>
+					<NavLink page="/music">Music</NavLink>
+					<NavLink page="/projects">Projects</NavLink>
 				</div>
 				<div className="ml-auto">Socials links</div>
 			</div>
@@ -30,8 +33,17 @@ type NavLinkProps = {
 };
 
 function NavLink({ children, page }: NavLinkProps) {
+	const [active, setActive] = useState(false);
+
+	useEffect(() => {
+		setActive(window.location.pathname === page);
+	});
+
 	return (
-		<div className="p-2 text-lg">
+		<div
+			className={`p-2 text-lg hover:opacity-100 transition-opacity
+		${active ? 'opacity-100' : 'opacity-50'}`}
+		>
 			<Link href={page}>{children}</Link>
 		</div>
 	);
