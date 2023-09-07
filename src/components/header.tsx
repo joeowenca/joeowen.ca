@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import profilePicture from '../../public/profile-picture.jpg';
 import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
+import Navigation from './navigation';
 
 type HeaderProps = {
 	page: string;
@@ -33,7 +34,7 @@ export default function Header({ page }: HeaderProps) {
 
 	return (
 		<div
-			className={`fixed top-0 left-0 flex items-center w-screen max-h-20 p-3 z-50 ${
+			className={`fixed top-0 left-0 flex items-center w-full max-h-20 p-3 z-50 ${
 				color === 255 ? 'bg-black' : ''
 			}`}
 		>
@@ -54,6 +55,7 @@ export default function Header({ page }: HeaderProps) {
 					Joe Owen
 				</h1>
 			</div>
+			<Navigation color={color} />
 		</div>
 	);
 }
