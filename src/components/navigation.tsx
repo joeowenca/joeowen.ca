@@ -8,27 +8,58 @@ type NavigationProps = {
 };
 
 export default function Navigation({ color }: NavigationProps) {
+	const [showNav, setShowNav] = useState(false);
+
+	function toggleNav() {
+		setShowNav(!showNav);
+	}
+
 	return (
-		<>
+		<div
+			className="items-center w-1/2 ml-auto"
+			style={{ color: `rgb(${color}, ${color}, ${color})` }}
+			onClick={() => (showNav ? toggleNav() : '')}
+		>
 			<div
-				className="flex items-center w-1/2 ml-auto"
-				style={{ color: `rgb(${color}, ${color}, ${color})` }}
+				className={`lg:hidden icon-nav text-3xl px-3 float-right ${
+					showNav ? 'hidden' : ''
+				}`}
+				onClick={() => toggleNav()}
+			></div>
+			<div
+				className={`lg:flex ${
+					showNav
+						? 'flex transition-opacity opacity-100 bg-custom-blue/95 text-white items-center flex-col justify-center fixed top-0 left-0 w-full h-full'
+						: 'hidden'
+				}`}
 			>
-				<div className="flex -translate-x-1/2">
+				<div
+					className={`icon-close text-3xl px-6 absolute top-5 right-0 ${
+						showNav ? '' : 'hidden'
+					}`}
+					onClick={() => toggleNav()}
+				></div>
+				<div
+					className={`flex ${
+						showNav
+							? 'flex-col items-center pb-8'
+							: 'flex-row items-start pb-0 -translate-x-1/2'
+					} `}
+				>
 					<NavLink page="/">Home</NavLink>
 					<NavLink page="/photography">Photography</NavLink>
 					<NavLink page="/videos">Videos</NavLink>
 					<NavLink page="/music">Music</NavLink>
 					<NavLink page="/projects">Projects</NavLink>
 				</div>
-				<div className="flex pr-6 absolute right-0">
+				<div className={`flex ${showNav ? '' : 'absolute right-4'}`}>
 					<SocialLink
 						icon="instagram"
 						link="https://www.instagram.com/joeowen.ca/"
 					/>
 					<SocialLink
 						icon="youtube"
-						link="https://www.youtube.com/channel/UC-yxAw4mE3ZfLfRlolRmUSA"
+						link="https://www.youtube.com/@joeowen_mtb"
 					/>
 					<SocialLink
 						icon="soundcloud"
@@ -40,7 +71,7 @@ export default function Navigation({ color }: NavigationProps) {
 					/>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }
 
@@ -58,8 +89,8 @@ function NavLink({ children, page }: NavLinkProps) {
 
 	return (
 		<div
-			className={`p-2 text-lg hover:opacity-100 transition-opacity
-		${active ? 'opacity-100' : 'opacity-75'}`}
+			className={`p-1 px-2 text-lg hover:opacity-100 transition-opacity
+		${active ? 'opacity-100' : 'lg:opacity-75'}`}
 		>
 			<Link href={page}>{children}</Link>
 		</div>
@@ -75,7 +106,7 @@ function SocialLink({ icon, link }: SocialLinkProps) {
 	return (
 		<a href={link} target="_blank">
 			<div
-				className={`p-1.5 opacity-75 hover:opacity-100 icon-${icon}`}
+				className={`px-2.5 text-lg lg:opacity-75 hover:opacity-100 transition-opacity icon-${icon}`}
 			></div>
 		</a>
 	);

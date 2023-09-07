@@ -21,6 +21,9 @@ module.exports = {
         'vertical': "url('../../public/background-mobile.jpg')",
         'horizontal': "url('../../public/background-desktop.jpg')",
       },
+      backgroundColor: {
+        'custom-blue': '#002440',
+      }
     },
   },
   plugins: [],
