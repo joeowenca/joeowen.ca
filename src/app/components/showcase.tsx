@@ -10,6 +10,32 @@ import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
 export default function Showcase() {
 	const [alpha, setAlpha] = useState(0);
 
+	const sportsShowcaseSummary = `I'm all about snapping shots of extreme sports like mountain
+	biking and skiing because they get my heart racing just as
+	much as the athletes. I'm not just a photographer - I'm out
+	there in the action, vibing with fellow adventure junkies.
+	What really gets me stoked is catching those epic,
+	gravity-defying moments that make these sports a wild ride.
+	Flip through my pics to join in on the excitement and
+	adrenaline of extreme sports.`;
+
+	const landscapeShowcaseSummary = `Landscape photography is my jam because it gets me out in
+	the great outdoors, exploring the beauty of our world.
+	Honestly, landscapes just look incredible, and I can't
+	resist framing those stunning vistas. Whether it's chasing
+	sunsets, hiking through mountains, or simply soaking in the
+	serenity of nature, I'm all about capturing these
+	breathtaking scenes and sharing their beauty with the world.`;
+
+	const automotiveShowcaseSummary = `I'm all about automotive photography because it's a ticket
+	to an awesome community of people and some seriously cool
+	rides. There's just something about capturing the unique
+	character of cars that gets me going. Plus, I love helping
+	folks preserve their pride and joy through my lens. So,
+	whether it's meeting fellow car enthusiasts, photographing
+	rare beauties, or immortalizing the essence of a car, I'm
+	revved up and ready to roll.`;
+
 	function handleScroll() {
 		setAlpha(calculateScrollAlpha());
 	}
@@ -40,41 +66,21 @@ export default function Showcase() {
 					image={sportsShowcase}
 					align="left"
 				>
-					I'm all about snapping shots of extreme sports like mountain
-					biking and skiing because they get my heart racing just as
-					much as the athletes. I'm not just a photographer – I'm out
-					there in the action, vibing with fellow adventure junkies.
-					What really gets me stoked is catching those epic,
-					gravity-defying moments that make these sports a wild ride.
-					Flip through my pics to join in on the excitement and
-					adrenaline of extreme sports.
+					{sportsShowcaseSummary}
 				</ShowcaseItem>
 				<ShowcaseItem
 					title="Landscapes"
 					image={landscapeShowcase}
 					align="right"
 				>
-					Landscape photography is my jam because it gets me out in
-					the great outdoors, exploring the beauty of our world.
-					Honestly, landscapes just look incredible, and I can't
-					resist framing those stunning vistas. Whether it's chasing
-					sunsets, hiking through mountains, or simply soaking in the
-					serenity of nature, I'm all about capturing these
-					breathtaking scenes and sharing their beauty with the world.
+					{landscapeShowcaseSummary}
 				</ShowcaseItem>
 				<ShowcaseItem
 					title="Automotive"
 					image={automotiveShowcase}
 					align="left"
 				>
-					I'm all about automotive photography because it's a ticket
-					to an awesome community of people and some seriously cool
-					rides. There's just something about capturing the unique
-					character of cars that gets me going. Plus, I love helping
-					folks preserve their pride and joy through my lens. So,
-					whether it's meeting fellow car enthusiasts, photographing
-					rare beauties, or immortalizing the essence of a car, I'm
-					revved up and ready to roll.
+					{automotiveShowcaseSummary}
 				</ShowcaseItem>
 			</div>
 		</div>
