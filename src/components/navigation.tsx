@@ -27,9 +27,9 @@ export default function Navigation({ color }: NavigationProps) {
 				onClick={() => toggleNav()}
 			></div>
 			<div
-				className={`lg:flex ${
+				className={`lg:flex items-center ${
 					showNav
-						? 'flex transition-opacity opacity-100 bg-custom-blue/95 text-white items-center flex-col justify-center fixed top-0 left-0 w-full h-full'
+						? 'flex transition-opacity opacity-100 bg-custom-blue/95 text-white flex-col justify-center fixed top-0 left-0 w-full h-full'
 						: 'hidden'
 				}`}
 			>
@@ -89,7 +89,7 @@ function NavLink({ children, page }: NavLinkProps) {
 
 	return (
 		<div
-			className={`p-1 px-2 text-lg hover:opacity-100 transition-opacity
+			className={`p-1 px-2 text-xl hover:opacity-100 transition-opacity
 		${active ? 'opacity-100' : 'lg:opacity-75'}`}
 		>
 			<Link href={page}>{children}</Link>
@@ -106,7 +106,7 @@ function SocialLink({ icon, link }: SocialLinkProps) {
 	return (
 		<a href={link} target="_blank">
 			<div
-				className={`px-2.5 text-lg lg:opacity-75 hover:opacity-100 transition-opacity icon-${icon}`}
+				className={`px-2.5 text-xl lg:opacity-75 hover:opacity-100 transition-opacity icon-${icon}`}
 			></div>
 		</a>
 	);
