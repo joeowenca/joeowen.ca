@@ -5,6 +5,9 @@ import Image, { StaticImageData } from 'next/image';
 import sportsShowcase from '../../../public/sports-showcase.jpg';
 import landscapeShowcase from '../../../public/landscape-showcase.jpg';
 import automotiveShowcase from '../../../public/automotive-showcase.jpg';
+import mountainBikingShowcase from '../../../public/mountain-biking-showcase.jpg';
+import automotiveVideosShowcase from '../../../public/automotive-videos-showcase.jpg';
+import skiingShowcase from '../../../public/skiing-showcase.jpg';
 import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
 
 export default function Showcase() {
@@ -36,6 +39,16 @@ export default function Showcase() {
 	rare beauties, or immortalizing the essence of a car, I'm
 	revved up and ready to roll.`;
 
+	const mountainBikingShowcaseSummary = `I make mountain biking videos Oh yes I do. I make them when
+	I ride. It's nice to use a GoPro because I don't even need
+	to think about recording, I just do. This is why I like
+	making Mountain Biking videos.`;
+
+	const automotiveVideosShowcaseSummary = `Car videos! Oooh yes, how I've made a car video. There was a
+	car, it was driving, and I was like, oh ya, let's video it. Before we knew it, a car video was born.`;
+
+	const skiingShowcaseSummary = `Skiing sometimes. Sometimes take the GoPro with me. Put some music over top, and we got ourselves a skiing video.`;
+
 	function handleScroll() {
 		setAlpha(calculateScrollAlpha());
 	}
@@ -58,12 +71,13 @@ export default function Showcase() {
 			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})` }}
 		>
 			<div>
-				<h1 className="p-3 text-center font-serif text-2xl">
+				<h1 className="p-3 text-center font-serif text-3xl">
 					{'Photography'}
 				</h1>
 				<ShowcaseItem
 					title="Sports"
 					image={sportsShowcase}
+					fill="false"
 					align="left"
 				>
 					{sportsShowcaseSummary}
@@ -71,6 +85,7 @@ export default function Showcase() {
 				<ShowcaseItem
 					title="Landscapes"
 					image={landscapeShowcase}
+					fill="false"
 					align="right"
 				>
 					{landscapeShowcaseSummary}
@@ -78,9 +93,38 @@ export default function Showcase() {
 				<ShowcaseItem
 					title="Automotive"
 					image={automotiveShowcase}
+					fill="false"
 					align="left"
 				>
 					{automotiveShowcaseSummary}
+				</ShowcaseItem>
+
+				<h1 className="p-3 text-center font-serif text-3xl">
+					{'Videos'}
+				</h1>
+				<ShowcaseItem
+					title="Mountain biking"
+					image={mountainBikingShowcase}
+					fill="true"
+					align="left"
+				>
+					{mountainBikingShowcaseSummary}
+				</ShowcaseItem>
+				<ShowcaseItem
+					title="Automotive"
+					image={automotiveVideosShowcase}
+					fill="true"
+					align="left"
+				>
+					{automotiveVideosShowcaseSummary}
+				</ShowcaseItem>
+				<ShowcaseItem
+					title="Skiing biking"
+					image={skiingShowcase}
+					fill="true"
+					align="left"
+				>
+					{skiingShowcaseSummary}
 				</ShowcaseItem>
 			</div>
 		</div>
@@ -90,17 +134,24 @@ export default function Showcase() {
 type ShowcaseItemProps = {
 	title: string;
 	image: StaticImageData;
+	fill: string;
 	align: string;
 	children: string;
 };
 
-function ShowcaseItem({ title, image, align, children }: ShowcaseItemProps) {
+function ShowcaseItem({
+	title,
+	image,
+	fill,
+	align,
+	children,
+}: ShowcaseItemProps) {
 	return (
-		<section className="flex flex-col lg:flex-row items-center p-2.5 pb-3 max-w-7xl">
+		<section className="flex flex-col lg:flex-row items-center px-2.5 py-3 max-w-7xl">
 			<Image
-				className={`max-w-[65%] lg:max-w-sm lg:pb-0 pb-1  ${
-					align === 'right' ? 'lg:order-last lg:pl-5' : 'lg:pr-5'
-				}`}
+				className={`lg:max-w-sm lg:pb-0 pb-1 ${
+					fill === 'true' ? '' : 'max-w-[65%]'
+				} ${align === 'right' ? 'lg:order-last lg:pl-5' : 'lg:pr-5'}`}
 				src={image}
 				alt={`${title} showcase image`}
 			/>
