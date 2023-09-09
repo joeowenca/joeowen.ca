@@ -119,7 +119,7 @@ export default function Showcase() {
 					{automotiveVideosShowcaseSummary}
 				</ShowcaseItem>
 				<ShowcaseItem
-					title="Skiing biking"
+					title="Skiing"
 					image={skiingShowcase}
 					fill="true"
 					align="left"
