@@ -23,6 +23,7 @@ module.exports = {
       },
       backgroundColor: {
         'custom-blue': '#002440',
+        'custom-light-blue': '#004880',
       }
     },
   },
