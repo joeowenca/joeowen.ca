@@ -71,7 +71,7 @@ export default function Showcase() {
 			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})` }}
 		>
 			<div>
-				<h1 className="p-3 text-center font-serif text-3xl">
+				<h1 className="p-5 text-center font-serif text-2xl">
 					{'Photography'}
 				</h1>
 				<ShowcaseItem
@@ -99,7 +99,7 @@ export default function Showcase() {
 					{automotiveShowcaseSummary}
 				</ShowcaseItem>
 
-				<h1 className="p-3 text-center font-serif text-3xl">
+				<h1 className="p-5 text-center font-serif text-2xl">
 					{'Videos'}
 				</h1>
 				<ShowcaseItem
@@ -147,7 +147,7 @@ function ShowcaseItem({
 	children,
 }: ShowcaseItemProps) {
 	return (
-		<section className="flex flex-col lg:flex-row items-center px-2.5 py-3 max-w-7xl">
+		<section className="flex flex-col lg:flex-row items-center px-2.5 pb-6 max-w-7xl">
 			<Image
 				className={`lg:max-w-sm lg:pb-0 pb-1 ${
 					fill === 'true' ? '' : 'max-w-[65%]'
