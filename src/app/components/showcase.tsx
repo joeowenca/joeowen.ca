@@ -147,7 +147,7 @@ function ShowcaseItem({
 	children,
 }: ShowcaseItemProps) {
 	return (
-		<section className="flex flex-col lg:flex-row items-center px-2.5 pb-6 max-w-7xl">
+		<section className="flex flex-col lg:flex-row items-center lg:px-2.5 pb-6 max-w-7xl">
 			<Image
 				className={`lg:max-w-sm lg:pb-0 pb-1 ${
 					fill === 'true' ? '' : 'max-w-[65%]'
