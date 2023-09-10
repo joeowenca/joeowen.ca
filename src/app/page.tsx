@@ -1,6 +1,7 @@
+import Header from '@/components/header';
 import Introduction from '@/app/components/introduction';
 import Showcase from '@/app/components/showcase';
-import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 export default function Home() {
 	return (
@@ -10,6 +11,7 @@ export default function Home() {
 				<Introduction />
 				<Showcase />
 			</main>
+			<Footer />
 		</>
 	);
 }

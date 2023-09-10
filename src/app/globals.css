@@ -42,27 +42,48 @@ body {
   font-family: 'icons' !important;
   content: "\e900";
 }
+
 .icon-close:before {
   font-family: 'icons' !important;
   content: "\e901";
 }
+
 .icon-nav:before {
   font-family: 'icons' !important;
   content: "\e902";
 }
+
 .icon-instagram:before {
   font-family: 'icons' !important;
   content: "\ea95";
 }
+
 .icon-youtube:before {
   font-family: 'icons' !important;
   content: "\eaa0";
 }
+
+.icon-tiktok:before {
+  font-family: 'icons' !important;
+  content: "\eaee";
+}
+
 .icon-soundcloud:before {
   font-family: 'icons' !important;
   content: "\eac6";
 }
+
 .icon-github:before {
   font-family: 'icons' !important;
   content: "\eab3";
+}
+
+.icon-facebook:before {
+  font-family: 'icons' !important;
+  content: "\ea93";
+}
+
+.icon-linkedin:before {
+  font-family: 'icons' !important;
+  content: "\eacd";
 }
