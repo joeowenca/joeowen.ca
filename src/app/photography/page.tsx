@@ -1,6 +1,11 @@
+import { Metadata } from 'next';
 import Header from '@/components/header';
 import Content from '@/components/content';
 import Footer from '@/components/footer';
+
+export const metadata: Metadata = {
+	title: 'Joe Owen | Photography',
+};
 
 export default function Photography() {
 	return (

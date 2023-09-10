@@ -4,16 +4,16 @@ import Content from '@/components/content';
 import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
-	title: 'Joe Owen | Videos',
+	title: 'Joe Owen | Contact',
 };
 
-export default function Videos() {
+export default function Contact() {
 	return (
 		<>
-			<Header page="videos" />
-			<Content title="Videos">
+			<Header page="contact" />
+			<Content title="Contact">
 				<pre className="font-sans whitespace-normal max-w-prose">
-					This is the videos page.
+					My name is Joe, but you can call me anytime.
 				</pre>
 			</Content>
 			<Footer />

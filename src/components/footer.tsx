@@ -9,28 +9,28 @@ export default function Footer() {
 					<div className="flex">
 						<ul className="px-6 w-1/2">
 							<FooterLinkItem
-								link="#"
+								link="https://www.instagram.com/joeowen.ca/"
 								redirect="true"
 								icon="instagram"
 							>
 								Instagram
 							</FooterLinkItem>
 							<FooterLinkItem
-								link="#"
+								link="https://www.youtube.com/@joeowen_mtb"
 								redirect="true"
 								icon="youtube"
 							>
 								YouTube
 							</FooterLinkItem>
 							<FooterLinkItem
-								link="#"
+								link="https://soundcloud.com/sas-areku"
 								redirect="true"
 								icon="soundcloud"
 							>
 								SoundCloud
 							</FooterLinkItem>
 							<FooterLinkItem
-								link="#"
+								link="https://www.tiktok.com/@joeowen.mtb"
 								redirect="true"
 								icon="tiktok"
 							>
@@ -39,21 +39,21 @@ export default function Footer() {
 						</ul>
 						<ul className="px-6 w-1/2">
 							<FooterLinkItem
-								link="#"
+								link="https://www.facebook.com/sasareku/"
 								redirect="true"
 								icon="facebook"
 							>
 								Facebook
 							</FooterLinkItem>
 							<FooterLinkItem
-								link="#"
+								link="https://github.com/Sas-Areku"
 								redirect="true"
 								icon="github"
 							>
 								GitHub
 							</FooterLinkItem>
 							<FooterLinkItem
-								link="#"
+								link="https://www.linkedin.com/in/joe-owen-11a138186/"
 								redirect="true"
 								icon="linkedin"
 							>
@@ -104,7 +104,7 @@ export default function Footer() {
 								Projects
 							</FooterLinkItem>
 							<FooterLinkItem
-								link="#"
+								link="/contact"
 								redirect="false"
 								icon="contact"
 							>
