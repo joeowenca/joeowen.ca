@@ -104,7 +104,7 @@ export default function Footer() {
 								Projects
 							</FooterLinkItem>
 							<FooterLinkItem
-								link="#"
+								link="/contact"
 								redirect="false"
 								icon="contact"
 							>
