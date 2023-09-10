@@ -36,6 +36,9 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .icon-arrow:before {

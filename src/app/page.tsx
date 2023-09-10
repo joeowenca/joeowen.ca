@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<>
 			<Header page="home" />
-			<main>
+			<main className="flex-1">
 				<Introduction />
 				<Showcase />
 			</main>
