@@ -36,33 +36,87 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .icon-arrow:before {
   font-family: 'icons' !important;
   content: "\e900";
 }
+
 .icon-close:before {
   font-family: 'icons' !important;
   content: "\e901";
 }
+
 .icon-nav:before {
   font-family: 'icons' !important;
   content: "\e902";
 }
+
 .icon-instagram:before {
   font-family: 'icons' !important;
   content: "\ea95";
 }
+
 .icon-youtube:before {
   font-family: 'icons' !important;
   content: "\eaa0";
 }
+
+.icon-tiktok:before {
+  font-family: 'icons' !important;
+  content: "\eaee";
+}
+
 .icon-soundcloud:before {
   font-family: 'icons' !important;
   content: "\eac6";
 }
+
 .icon-github:before {
   font-family: 'icons' !important;
   content: "\eab3";
+}
+
+.icon-facebook:before {
+  font-family: 'icons' !important;
+  content: "\ea93";
+}
+
+.icon-linkedin:before {
+  font-family: 'icons' !important;
+  content: "\eacd";
+}
+
+.icon-home:before {
+  font-family: 'icons' !important;
+  content: "\e903";
+}
+
+.icon-camera:before {
+  font-family: 'icons' !important;
+  content: "\e912";
+}
+
+.icon-video:before {
+  font-family: 'icons' !important;
+  content: "\e917";
+}
+
+.icon-music:before {
+  font-family: 'icons' !important;
+  content: "\e914";
+}
+
+.icon-laptop:before {
+  font-family: 'icons' !important;
+  content: "\e95a";
+}
+
+.icon-contact:before {
+  font-family: 'icons' !important;
+  content: "\e945";
 }
