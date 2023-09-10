@@ -87,3 +87,33 @@ body {
   font-family: 'icons' !important;
   content: "\eacd";
 }
+
+.icon-home:before {
+  font-family: 'icons' !important;
+  content: "\e903";
+}
+
+.icon-camera:before {
+  font-family: 'icons' !important;
+  content: "\e912";
+}
+
+.icon-video:before {
+  font-family: 'icons' !important;
+  content: "\e917";
+}
+
+.icon-music:before {
+  font-family: 'icons' !important;
+  content: "\e914";
+}
+
+.icon-laptop:before {
+  font-family: 'icons' !important;
+  content: "\e95a";
+}
+
+.icon-contact:before {
+  font-family: 'icons' !important;
+  content: "\e945";
+}
