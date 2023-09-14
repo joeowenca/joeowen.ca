@@ -74,9 +74,14 @@ function VideoItem({ title, image, age, children }: VideoItemProps) {
 			<div className="max-w-prose grow relative">
 				<h2 className="font-serif text-xl py-3">{title}</h2>
 				<pre className="font-sans whitespace-normal">{children}</pre>
-				<button className="icon-play bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-3">
-					Watch
-				</button>
+				<div className="flex items-center">
+					<button className="icon-play bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-3">
+						Watch
+					</button>
+					<pre className="font-sans whitespace-normal pl-3">
+						{age}
+					</pre>
+				</div>
 			</div>
 		</section>
 	);
