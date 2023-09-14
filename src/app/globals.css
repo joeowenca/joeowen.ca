@@ -120,3 +120,11 @@ body {
   font-family: 'icons' !important;
   content: "\e945";
 }
+
+.icon-play:before {
+  font-family: 'icons' !important;
+  content: "\ea1f";
+  position: relative;
+  top: 1px;
+  padding-right: 0.5rem;
+}
