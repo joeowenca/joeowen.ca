@@ -5,8 +5,6 @@ const requestURL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&
 export default async function GetYouTubeVideos() {
   const data = await FetchYouTubeVideos();
 
-  console.log(data);
-
   return data.items.map((video: any) => {
     if (video.snippet.description !== "") {
       const videoDate = new Date(video.snippet.publishedAt);
@@ -18,9 +16,9 @@ export default async function GetYouTubeVideos() {
         description: video.snippet.description,
         age: videoAge,
         thumbnail: {
-          url: video.snippet.thumbnails.medium.url,
-          width: video.snippet.thumbnails.medium.width,
-          height: video.snippet.thumbnails.medium.height,
+          url: video.snippet.thumbnails.high.url,
+          width: video.snippet.thumbnails.high.width,
+          height: video.snippet.thumbnails.high.height,
         },
       };
     }
