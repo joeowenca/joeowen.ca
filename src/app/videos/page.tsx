@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 
 export default function Videos() {
 	const [videosList, setVideosList] = useState([]);
+	const [playingVideo, setPlayingVideo] = useState({});
 
 	function getVideoId() {
 		const url = new URL(window.location.href);
 		const searchParams = url.searchParams;
-
 		return searchParams.get('v');
 	}
 
@@ -32,16 +32,27 @@ export default function Videos() {
 		getData();
 	}, []);
 
+	useEffect(() => {
+		if (videosList.length > 0) {
+			const playing = videosList.find(
+				(video: any) => video.id === getVideoId(),
+			);
+			console.log(playing);
+			console.log(playingVideo);
+			setPlayingVideo(playing || 'XwHneLWFkhY');
+		}
+	});
+
 	return (
 		<>
 			<Header page="videos" />
 			<Content title="Videos">
 				<div>
-					<div className="w-full pb-6">
+					<div className="w-full pb-12">
 						<iframe
 							className="w-full aspect-video"
 							src={`https://www.youtube.com/embed/${
-								getVideoId() || 'XwHneLWFkhY'
+								playingVideo.id
 							}?autoplay=${
 								getVideoId() === null ? '0' : '1'
 							}&rel=0`}
@@ -49,14 +60,18 @@ export default function Videos() {
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							allowFullScreen={true}
 						></iframe>
+						<h2 className="font-serif text-2xl py-5">
+							{playingVideo.title}
+						</h2>
+						<pre className="font-sans whitespace-normal">
+							{playingVideo.description}
+						</pre>
 					</div>
 					{videosList.length > 0 ? (
 						videosList.map((video: any) => (
 							<VideoItem
-								title={`${video.title
-									.replace(/&#39;/g, "'")
-									.substring(0, 50)}${
-									video.title.length >= 50 ? '...' : ''
+								title={`${video.title}${
+									video.title.length >= 60 ? '...' : ''
 								}`}
 								image={video.thumbnail}
 								age={video.age}

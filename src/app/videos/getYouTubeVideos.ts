@@ -12,7 +12,7 @@ export default async function GetYouTubeVideos() {
 
       return {
         id: video.id.videoId,
-        title: video.snippet.title,
+        title: video.snippet.title.replace(/&#39;/g, "'").substring(0, 100),
         description: video.snippet.description,
         age: videoAge,
         thumbnail: {
