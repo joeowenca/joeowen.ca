@@ -5,18 +5,27 @@ import Content from '@/components/content';
 import Footer from '@/components/footer';
 import ReactPlayer from 'react-player';
 import Image, { StaticImageData } from 'next/image';
-import refraction from '../../../public/cover-art/refraction-album-art.jpg';
+import songs from './songs';
 
 export default function Music() {
+	type SongTypes = {
+		title: string;
+		url: string;
+		image: StaticImageData;
+	};
 	return (
 		<>
 			<Header page="music" />
 			<Content title="Music">
 				<div className="flex flex-col">
-					<MusicItem
-						song="https://soundcloud.com/sas-areku/refraction-sas-areku"
-						image={refraction}
-					></MusicItem>
+					{songs.map((song: SongTypes) => (
+						<MusicItem
+							key={song.title}
+							title={song.title}
+							url={song.url}
+							image={song.image}
+						/>
+					))}
 				</div>
 			</Content>
 			<Footer />
@@ -25,20 +34,21 @@ export default function Music() {
 }
 
 type MusicItemProps = {
-	song: string;
+	title: string;
+	url: string;
 	image: StaticImageData;
 };
 
-function MusicItem({ song, image }: MusicItemProps) {
+function MusicItem({ title, url, image }: MusicItemProps) {
 	return (
 		<section className="flex items-center md:w-[46rem] lg:w-[62rem] md:h-56 mb-5">
 			<Image
 				className={'hidden md:block h-56 w-56 mr-5'}
 				src={image}
-				alt={'song cover art'}
+				alt={`${title} cover art`}
 			/>
 			<div className="aspect-square lg:aspect-auto w-full h-full">
-				<ReactPlayer url={song} width="100%" height="100%" />
+				<ReactPlayer url={url} width="100%" height="100%" />
 			</div>
 		</section>
 	);
