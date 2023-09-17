@@ -26,6 +26,14 @@ module.exports = {
       backgroundColor: {
         'custom-blue': '#002440',
         'custom-light-blue': '#004880',
+      },
+      maxWidth: {
+        'xxxs': '160px',
+        'xxs': '240px',
+      },
+      maxHeight: {
+        'xxxs': '160px',
+        'xxs': '240px',
       }
     },
   },
