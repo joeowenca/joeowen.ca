@@ -111,9 +111,9 @@ type VideoItemProps = {
 
 function VideoItem({ title, image, age, id, children }: VideoItemProps) {
 	return (
-		<section className="flex flex-col lg:flex-row items-center lg:px-2.5 pb-6 max-w-7xl">
+		<section className="flex flex-col lg:flex-row items-center pb-6 max-w-7xl">
 			<Image
-				className="aspect-video object-cover max-w-[80%] xs:max-w-sm 3xl:max-w-sm lg:mb-0 mb-1 lg:mr-5"
+				className="aspect-video object-cover max-w-[80%] xs:max-w-sm lg:max-w-xs 3xl:max-w-sm lg:mb-0 mb-1 lg:mr-5"
 				src={image.url}
 				width={image.width}
 				height={image.height}
