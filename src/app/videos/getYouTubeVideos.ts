@@ -2,10 +2,40 @@ const API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 const CHANNEL_ID = process.env.NEXT_PUBLIC_YOUTUBE_CHANNEL_ID;
 const requestURL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=50`;
 
-export default async function GetYouTubeVideos() {
-  const data = await FetchYouTubeVideos();
+type ResponseType = {
+  id: {
+    videoId: string;
+  };
+  snippet: {
+    title: string;
+    description: string;
+    publishedAt: string;
+    thumbnails: {
+      high: {
+        url: string;
+        width: number;
+        height: number;
+      };
+    };
+  }
+}
 
-  return data.items.map((video: any) => {
+export type VideosType = {
+  id: string;
+  title: string;
+  description: string;
+  age: string;
+  thumbnail: {
+    url: string;
+    width: number;
+    height: number;
+  }
+}
+
+export async function GetYouTubeVideos() {
+  const response = await FetchYouTubeVideos();
+
+  return response.items.map((video: ResponseType) => {
     if (video.snippet.description !== "") {
       const videoDate = new Date(video.snippet.publishedAt);
       const videoAge = timeAgoString(videoDate);
@@ -24,7 +54,7 @@ export default async function GetYouTubeVideos() {
     }
 
     return null;
-  }).filter((video: any) => video !== null);
+  }).filter((video: ResponseType) => video !== null);
 }
 
 async function FetchYouTubeVideos() {

@@ -6,11 +6,24 @@ import Content from '@/components/content';
 import Footer from '@/components/footer';
 import Image from 'next/image';
 
-import GetYouTubeVideos from './getYouTubeVideos';
+import { GetYouTubeVideos, VideosType } from './getYouTubeVideos';
+
+const defaultVideo: VideosType = {
+	id: 'XwHneLWFkhY',
+	title: 'Crankworx 2023 | Sending Dirt Merchant Blind | Mountain Biking in Whistler',
+	description:
+		'Had an awesome week out at Crankworx with Ender. Explored a lot of new trails and sent the dirt merchant pro line blind. Stoked ...',
+	age: 'A while ago...',
+	thumbnail: {
+		url: 'No thumbnail',
+		width: 320,
+		height: 240,
+	},
+};
 
 export default function Videos() {
 	const [videosList, setVideosList] = useState([]);
-	const [playingVideo, setPlayingVideo] = useState({});
+	const [playingVideo, setPlayingVideo] = useState<VideosType>(defaultVideo);
 
 	function getVideoId() {
 		const url = new URL(window.location.href);
@@ -29,14 +42,14 @@ export default function Videos() {
 
 	useEffect(() => {
 		if (videosList.length > 0) {
-			const playing = videosList.find(
-				(video: any) => video.id === getVideoId(),
-			);
-			console.log(playing);
-			console.log(playingVideo);
-			setPlayingVideo(playing || 'XwHneLWFkhY');
+			const playing: VideosType =
+				videosList.find(
+					(video: VideosType) => video.id === getVideoId(),
+				) ?? defaultVideo;
+
+			setPlayingVideo(playing);
 		}
-	});
+	}, [videosList, playingVideo]);
 
 	return (
 		<>
@@ -63,7 +76,7 @@ export default function Videos() {
 						</pre>
 					</div>
 					{videosList.length > 0 ? (
-						videosList.map((video: any) => (
+						videosList.map((video: VideosType) => (
 							<VideoItem
 								title={`${video.title}${
 									video.title.length >= 60 ? '...' : ''
@@ -71,6 +84,7 @@ export default function Videos() {
 								image={video.thumbnail}
 								age={video.age}
 								id={video.id}
+								key={video.id}
 							>
 								{video.description.replace(/&#39;/g, "'")}
 							</VideoItem>
@@ -87,7 +101,11 @@ export default function Videos() {
 
 type VideoItemProps = {
 	title: string;
-	image: any;
+	image: {
+		url: string;
+		width: number;
+		height: number;
+	};
 	age: string;
 	id: string;
 	children: string;
