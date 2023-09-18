@@ -21,15 +21,12 @@ const defaultVideo: VideosType = {
 	},
 };
 
+type VideoUrlType = string | null;
+
 export default function Videos() {
 	const [videosList, setVideosList] = useState([]);
 	const [playingVideo, setPlayingVideo] = useState<VideosType>(defaultVideo);
-
-	function getVideoId() {
-		const url = new URL(window.location.href);
-		const searchParams = url.searchParams;
-		return searchParams.get('v');
-	}
+	const [videoUrl, setVideoUrl] = useState<VideoUrlType>(null);
 
 	useEffect(() => {
 		async function getData() {
@@ -38,14 +35,17 @@ export default function Videos() {
 		}
 
 		getData();
+
+		const url = new URL(window.location.href);
+		const searchParams = url.searchParams;
+		setVideoUrl(searchParams.get('v'));
 	}, []);
 
 	useEffect(() => {
 		if (videosList.length > 0) {
 			const playing: VideosType =
-				videosList.find(
-					(video: VideosType) => video.id === getVideoId(),
-				) ?? defaultVideo;
+				videosList.find((video: VideosType) => video.id === videoUrl) ??
+				defaultVideo;
 
 			setPlayingVideo(playing);
 		}
@@ -61,9 +61,7 @@ export default function Videos() {
 							className="w-full aspect-video"
 							src={`https://www.youtube.com/embed/${
 								playingVideo.id
-							}?autoplay=${
-								getVideoId() === null ? '0' : '1'
-							}&rel=0`}
+							}?autoplay=${videoUrl === null ? '0' : '1'}&rel=0`}
 							title="YouTube video player"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							allowFullScreen={true}
