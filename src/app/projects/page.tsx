@@ -21,6 +21,7 @@ export default function Projects() {
 							image={project.image}
 							deployment={project.deployment}
 							repo={project.repo}
+							key={project.title}
 						>
 							{project.description}
 						</ProjectItem>
