@@ -61,7 +61,7 @@ function ProjectItem({
 					</button>
 				</a>
 				<a href={repo} target="_blank">
-					<button className="icon-github bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-3">
+					<button className="icon-github-spaced bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-3">
 						View on Github
 					</button>
 				</a>
