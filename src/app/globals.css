@@ -44,81 +44,121 @@ body {
 .icon-arrow:before {
   font-family: 'icons' !important;
   content: "\e900";
+  position: relative;
+  top: 1px;
 }
 
 .icon-close:before {
   font-family: 'icons' !important;
   content: "\e901";
+  position: relative;
+  top: 1px;
 }
 
 .icon-nav:before {
   font-family: 'icons' !important;
   content: "\e902";
+  position: relative;
+  top: 1px;
 }
 
 .icon-instagram:before {
   font-family: 'icons' !important;
   content: "\ea95";
+  position: relative;
+  top: 1px;
 }
 
 .icon-youtube:before {
   font-family: 'icons' !important;
   content: "\eaa0";
+  position: relative;
+  top: 1px;
 }
 
 .icon-tiktok:before {
   font-family: 'icons' !important;
   content: "\eaee";
+  position: relative;
+  top: 1px;
 }
 
 .icon-soundcloud:before {
   font-family: 'icons' !important;
   content: "\eac6";
+  position: relative;
+  top: 1px;
 }
 
 .icon-github:before {
   font-family: 'icons' !important;
   content: "\eab3";
+  position: relative;
+  top: 1px;
+}
+
+.icon-github-spaced:before {
+  font-family: 'icons' !important;
+  content: "\eab3";
+  position: relative;
+  top: 1px;
+  padding-right: 0.5rem;
 }
 
 .icon-facebook:before {
   font-family: 'icons' !important;
   content: "\ea93";
+  position: relative;
+  top: 1px;
 }
 
 .icon-linkedin:before {
   font-family: 'icons' !important;
   content: "\eacd";
+  position: relative;
+  top: 1px;
 }
 
 .icon-home:before {
   font-family: 'icons' !important;
   content: "\e903";
+  position: relative;
+  top: 1px;
 }
 
 .icon-camera:before {
   font-family: 'icons' !important;
   content: "\e912";
+  position: relative;
+  top: 1px;
 }
 
 .icon-video:before {
   font-family: 'icons' !important;
   content: "\e917";
+  position: relative;
+  top: 1px;
 }
 
 .icon-music:before {
   font-family: 'icons' !important;
   content: "\e914";
+  position: relative;
+  top: 1px;
 }
 
 .icon-laptop:before {
   font-family: 'icons' !important;
   content: "\e95a";
+  position: relative;
+  top: 1px;
 }
 
 .icon-contact:before {
   font-family: 'icons' !important;
   content: "\e945";
+  position: relative;
+  top: 1px;
 }
 
 .icon-play:before {
