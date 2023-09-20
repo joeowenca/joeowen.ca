@@ -3,7 +3,7 @@ import Header from '@/components/header';
 import Content from '@/components/content';
 import Footer from '@/components/footer';
 import Image, { StaticImageData } from 'next/image';
-import budgeit from '../../../public/budge-it-logo.png';
+import { projects, ProjectTypes } from './projects';
 
 export const metadata: Metadata = {
 	title: 'Joe Owen | Projects',
@@ -15,14 +15,16 @@ export default function Projects() {
 			<Header page="projects" />
 			<Content title="Projects">
 				<div>
-					<ProjectItem
-						title="Budge-it"
-						image={budgeit}
-						deployment="https://sas-areku.github.io/budge-it/"
-						repo="https://github.com/Sas-Areku/budge-it"
-					>
-						Simple budget app for visualizing your expenses
-					</ProjectItem>
+					{projects.map((project: ProjectTypes) => (
+						<ProjectItem
+							title={project.title}
+							image={project.image}
+							deployment={project.deployment}
+							repo={project.repo}
+						>
+							{project.description}
+						</ProjectItem>
+					))}
 				</div>
 			</Content>
 			<Footer />
