@@ -48,23 +48,27 @@ function ProjectItem({
 	return (
 		<section className="flex flex-col lg:flex-row items-center pb-6 max-w-7xl">
 			<Image
-				className="aspect-square object-cover max-w-[80%] xs:max-w-sm lg:max-w-xxxxs 3xl:max-w-xxxs lg:mb-0 mb-1 lg:mr-5"
+				className="aspect-square object-cover max-w-xxxxs 3xl:max-w-xxxs lg:mb-0 mb-1 lg:mr-5"
 				src={image}
 				alt={`${title} project thumbnail`}
 			/>
 			<div className="max-w-prose grow relative">
-				<h2 className="font-serif text-xl py-3">{title}</h2>
+				<h2 className="font-serif text-center lg:text-left text-2xl py-3">
+					{title}
+				</h2>
 				<pre className="font-sans whitespace-normal">{children}</pre>
-				<a href={deployment} target="_blank">
-					<button className="icon-play bg-custom-green hover:bg-custom-light-green transition-colors px-4 py-3 mr-5 my-3">
-						View deployment
-					</button>
-				</a>
-				<a href={repo} target="_blank">
-					<button className="icon-github-spaced bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-3">
-						View on Github
-					</button>
-				</a>
+				<div className="flex flex-col items-center lg:flex-row">
+					<a href={deployment} target="_blank">
+						<button className="icon-play bg-custom-green hover:bg-custom-light-green transition-colors px-4 py-3 lg:mr-5 mb-1.5 mt-3 lg:my-3">
+							View deployment
+						</button>
+					</a>
+					<a href={repo} target="_blank">
+						<button className="icon-github-spaced bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-1.5 lg:my-3">
+							View on Github
+						</button>
+					</a>
+				</div>
 			</div>
 		</section>
 	);
