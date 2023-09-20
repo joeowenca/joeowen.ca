@@ -30,6 +30,7 @@ module.exports = {
         'custom-light-green': '#20600F'
       },
       maxWidth: {
+        'xxxxs': '128px',
         'xxxs': '160px',
         'xxs': '240px',
       },
