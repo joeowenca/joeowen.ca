@@ -77,7 +77,7 @@ export default function Showcase() {
 				<ShowcaseItem
 					title="Sports"
 					image={sportsShowcase}
-					fill="false"
+					fill={false}
 					align="left"
 				>
 					{sportsShowcaseSummary}
@@ -85,7 +85,7 @@ export default function Showcase() {
 				<ShowcaseItem
 					title="Landscapes"
 					image={landscapeShowcase}
-					fill="false"
+					fill={false}
 					align="right"
 				>
 					{landscapeShowcaseSummary}
@@ -93,7 +93,7 @@ export default function Showcase() {
 				<ShowcaseItem
 					title="Automotive"
 					image={automotiveShowcase}
-					fill="false"
+					fill={false}
 					align="left"
 				>
 					{automotiveShowcaseSummary}
@@ -105,7 +105,7 @@ export default function Showcase() {
 				<ShowcaseItem
 					title="Mountain biking"
 					image={mountainBikingShowcase}
-					fill="true"
+					fill={true}
 					align="left"
 				>
 					{mountainBikingShowcaseSummary}
@@ -113,7 +113,7 @@ export default function Showcase() {
 				<ShowcaseItem
 					title="Automotive"
 					image={automotiveVideosShowcase}
-					fill="true"
+					fill={true}
 					align="left"
 				>
 					{automotiveVideosShowcaseSummary}
@@ -121,7 +121,7 @@ export default function Showcase() {
 				<ShowcaseItem
 					title="Skiing"
 					image={skiingShowcase}
-					fill="true"
+					fill={true}
 					align="left"
 				>
 					{skiingShowcaseSummary}
@@ -134,7 +134,7 @@ export default function Showcase() {
 type ShowcaseItemProps = {
 	title: string;
 	image: StaticImageData;
-	fill: string;
+	fill: boolean;
 	align: string;
 	children: string;
 };
@@ -150,9 +150,7 @@ function ShowcaseItem({
 		<section className="flex flex-col lg:flex-row items-center lg:px-2.5 pb-6 max-w-7xl">
 			<Image
 				className={`lg:max-w-xs 3xl:max-w-sm lg:pb-0 pb-1 ${
-					fill === 'true'
-						? 'max-w-[80%] xs:max-w-sm'
-						: 'max-w-[65%] xs:max-w-xs'
+					fill ? 'max-w-[80%] xs:max-w-sm' : 'max-w-[65%] xs:max-w-xs'
 				} ${align === 'right' ? 'lg:order-last lg:pl-5' : 'lg:pr-5'}`}
 				src={image}
 				alt={`${title} showcase image`}

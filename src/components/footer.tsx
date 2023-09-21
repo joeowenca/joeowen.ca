@@ -10,28 +10,28 @@ export default function Footer() {
 						<ul className="px-6 w-1/2">
 							<FooterLinkItem
 								link="https://www.instagram.com/joeowen.ca/"
-								redirect="true"
+								redirect={true}
 								icon="instagram"
 							>
 								Instagram
 							</FooterLinkItem>
 							<FooterLinkItem
 								link="https://www.youtube.com/@joeowen_mtb"
-								redirect="true"
+								redirect={true}
 								icon="youtube"
 							>
 								YouTube
 							</FooterLinkItem>
 							<FooterLinkItem
 								link="https://soundcloud.com/sas-areku"
-								redirect="true"
+								redirect={true}
 								icon="soundcloud"
 							>
 								SoundCloud
 							</FooterLinkItem>
 							<FooterLinkItem
 								link="https://www.tiktok.com/@joeowen.mtb"
-								redirect="true"
+								redirect={true}
 								icon="tiktok"
 							>
 								TikTok
@@ -40,21 +40,21 @@ export default function Footer() {
 						<ul className="px-6 w-1/2">
 							<FooterLinkItem
 								link="https://www.facebook.com/sasareku/"
-								redirect="true"
+								redirect={true}
 								icon="facebook"
 							>
 								Facebook
 							</FooterLinkItem>
 							<FooterLinkItem
 								link="https://github.com/Sas-Areku"
-								redirect="true"
+								redirect={true}
 								icon="github"
 							>
 								GitHub
 							</FooterLinkItem>
 							<FooterLinkItem
 								link="https://www.linkedin.com/in/joe-owen-11a138186/"
-								redirect="true"
+								redirect={true}
 								icon="linkedin"
 							>
 								Linkedin
@@ -68,28 +68,28 @@ export default function Footer() {
 						<ul className="px-6 w-1/2">
 							<FooterLinkItem
 								link="/"
-								redirect="false"
+								redirect={false}
 								icon="home"
 							>
 								Home
 							</FooterLinkItem>
 							<FooterLinkItem
 								link="/photography"
-								redirect="false"
+								redirect={false}
 								icon="camera"
 							>
 								Photography
 							</FooterLinkItem>
 							<FooterLinkItem
 								link="/videos"
-								redirect="false"
+								redirect={false}
 								icon="video"
 							>
 								Videos
 							</FooterLinkItem>
 							<FooterLinkItem
 								link="/music"
-								redirect="false"
+								redirect={false}
 								icon="music"
 							>
 								Music
@@ -98,14 +98,14 @@ export default function Footer() {
 						<ul className="px-6 w-1/2">
 							<FooterLinkItem
 								link="/projects"
-								redirect="false"
+								redirect={false}
 								icon="laptop"
 							>
 								Projects
 							</FooterLinkItem>
 							<FooterLinkItem
 								link="/contact"
-								redirect="false"
+								redirect={false}
 								icon="contact"
 							>
 								Contact
@@ -121,7 +121,7 @@ export default function Footer() {
 
 type FooterLinkItemProps = {
 	link: string;
-	redirect: string;
+	redirect: boolean;
 	icon: string;
 	children: string;
 };
@@ -137,7 +137,7 @@ function FooterLinkItem({
 			<span className={`icon-${icon} pr-1.5`}></span>
 			<a
 				href={link}
-				target={redirect === 'true' ? '_blank' : ''}
+				target={redirect ? '_blank' : ''}
 				className="hover:underline"
 			>
 				{children}
