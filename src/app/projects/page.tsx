@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Header from '@/components/header';
 import Content from '@/components/content';
 import Footer from '@/components/footer';
+import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
 import { projects, ProjectTypes } from './projects';
 
@@ -63,20 +64,24 @@ function ProjectItem({
 					{children}
 				</pre>
 				<div className="flex items-center">
-					<a
+					<Link
 						href={deployment}
 						target="_blank"
-						className={deployment === 'none' ? 'hidden' : ''}
+						className={
+							deployment === 'none'
+								? 'hidden'
+								: 'icon-play bg-custom-green hover:bg-custom-light-green transition-colors px-4 py-3 mr-5 my-3'
+						}
 					>
-						<button className="icon-play bg-custom-green hover:bg-custom-light-green transition-colors px-4 py-3 mr-5 my-3">
-							Preview
-						</button>
-					</a>
-					<a href={repo} target="_blank">
-						<button className="icon-github-spaced bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-1.5 lg:my-3">
-							Github
-						</button>
-					</a>
+						Preview
+					</Link>
+					<Link
+						href={repo}
+						target="_blank"
+						className="icon-github-spaced bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-1.5 lg:my-3"
+					>
+						Github
+					</Link>
 				</div>
 			</div>
 		</section>

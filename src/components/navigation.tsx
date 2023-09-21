@@ -104,10 +104,10 @@ type SocialLinkProps = {
 
 function SocialLink({ icon, link }: SocialLinkProps) {
 	return (
-		<a href={link} target="_blank">
-			<div
-				className={`px-2.5 text-xl lg:opacity-75 hover:opacity-100 transition-opacity icon-${icon}`}
-			></div>
-		</a>
+		<Link
+			href={link}
+			target="_blank"
+			className={`px-2.5 text-xl lg:opacity-75 hover:opacity-100 transition-opacity icon-${icon}`}
+		/>
 	);
 }

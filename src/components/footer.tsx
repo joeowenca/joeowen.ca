@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
 	return (
 		<div className="flex flex-col items-center w-full pt-5 bg-black">
@@ -135,13 +137,13 @@ function FooterLinkItem({
 	return (
 		<li className="py-0.5">
 			<span className={`icon-${icon} pr-1.5`}></span>
-			<a
+			<Link
 				href={link}
 				target={redirect ? '_blank' : ''}
 				className="hover:underline"
 			>
 				{children}
-			</a>
+			</Link>
 		</li>
 	);
 }
