@@ -1,20 +1,8 @@
 import Image from 'next/image';
+import { content } from './content';
 import profilePicture from '../../../public/profile-picture.jpg';
 
 export default function Introduction() {
-	const introTextSummary = `
-    Welcome!
-    This website is a place for me to share all of my creative work.
-    I'm a photographer, video creator, musician, and software developer.
-    Feel free to take a look around and I hope you'll like what you see.
-  `;
-
-	const introTextCollaborate = `
-    Always happy to work with people.
-    If you're interested in partering or have any questions,
-    you can find my email at the bottom of this page.
-  `;
-
 	return (
 		<div className="fixed top-0 left-0 w-full h-full flex items-center justify-center -z-10 bg-vertical lg:bg-horizontal bg-cover bg-center">
 			<div className="flex flex-col items-center p-3">
@@ -25,8 +13,12 @@ export default function Introduction() {
 				/>
 				<h2 className="p-3 font-serif text-2xl text-black">Joe Owen</h2>
 				<div className="max-w-prose">
-					<IntroParagraph>{introTextSummary}</IntroParagraph>
-					<IntroParagraph>{introTextCollaborate}</IntroParagraph>
+					<IntroParagraph>
+						{content.introduction.summary}
+					</IntroParagraph>
+					<IntroParagraph>
+						{content.introduction.collaborate}
+					</IntroParagraph>
 				</div>
 			</div>
 			<pre className="fixed bottom-5 font-sans">
