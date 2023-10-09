@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Contact() {
 	return (
 		<>
-			<Header page="contact" />
+			<Header />
 			<Content title="Contact">
 				<pre className="font-sans whitespace-normal max-w-prose">
 					My name is Joe, but you can call me anytime.

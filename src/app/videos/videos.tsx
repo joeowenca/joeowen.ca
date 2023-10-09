@@ -53,7 +53,7 @@ export default function VideosContent() {
 
 	return (
 		<>
-			<Header page="videos" />
+			<Header />
 			<Content title="Videos">
 				<div>
 					<div className="w-full pb-12">

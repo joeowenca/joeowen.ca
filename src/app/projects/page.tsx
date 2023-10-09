@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Projects() {
 	return (
 		<>
-			<Header page="projects" />
+			<Header />
 			<Content title="Projects">
 				<div>
 					{projects.map((project: ProjectTypes) => (
