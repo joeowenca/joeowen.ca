@@ -6,14 +6,9 @@ import Footer from '@/components/footer';
 import ReactPlayer from 'react-player';
 import Image, { StaticImageData } from 'next/image';
 import sasareku from '../../../public/sas-areku.png';
-import songs from './songs';
+import { songs, SongTypes } from './songs';
 
 export default function MusicContent() {
-	type SongTypes = {
-		title: string;
-		url: string;
-		image: StaticImageData;
-	};
 	return (
 		<>
 			<Header page="music" />

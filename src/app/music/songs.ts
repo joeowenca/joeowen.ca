@@ -7,13 +7,13 @@ import attackonxen from '../../../public/cover-art/attack-on-xen-cover-art.jpg';
 import interkiller from '../../../public/cover-art/interkiller-cover-art.jpg';
 import allmine from '../../../public/cover-art/all-mine-cover-art.jpg';
 
-type SongTypes = {
+export type SongTypes = {
   title: string;
   url: string;
   image: StaticImageData;
 }
 
-const songs:SongTypes[] = [
+export const songs:SongTypes[] = [
   {
     title: "Refraction",
     url: "https://soundcloud.com/sas-areku/refraction-sas-areku",
@@ -50,5 +50,3 @@ const songs:SongTypes[] = [
     image: allmine,
   }
 ];
-
-export default songs;
