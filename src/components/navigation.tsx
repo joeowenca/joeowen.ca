@@ -17,6 +17,9 @@ export default function Navigation({ color }: NavigationProps) {
 	return (
 		<>
 			<NavMenu color={color} className="hidden lg:flex" />
+			<div className="lg:hidden flex flex-col justify-center fixed top-0 left-0 w-full h-full bg-custom-blue/95">
+				<NavMenu />
+			</div>
 		</>
 	);
 }
@@ -29,17 +32,17 @@ type NavMenuProps = {
 function NavMenu({ color, className }: NavMenuProps) {
 	return (
 		<div
-			className={`lg:absolute lg:right-0 lg:w-1/2 ${className}`}
+			className={`flex flex-col lg:flex-row items-center lg:items-start lg:absolute lg:right-0 lg:w-1/2 ${className}`}
 			style={{ color: `rgb(${color}, ${color}, ${color})` }}
 		>
-			<div className="flex -translate-x-[50%]">
+			<div className="flex flex-col lg:flex-row items-center lg:items-start pb-5 lg:pb-0 lg:-translate-x-[50%]">
 				<NavLink page="/">Home</NavLink>
 				<NavLink page="/photography">Photography</NavLink>
 				<NavLink page="/videos">Videos</NavLink>
 				<NavLink page="/music">Music</NavLink>
 				<NavLink page="/projects">Projects</NavLink>
 			</div>
-			<div className="absolute right-0 mr-5">
+			<div className="lg:absolute lg:right-0 lg:mr-5">
 				<SocialLink
 					icon="instagram"
 					link="https://www.instagram.com/joeowen.ca/"
