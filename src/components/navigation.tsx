@@ -15,61 +15,82 @@ export default function Navigation({ color }: NavigationProps) {
 	}
 
 	return (
-		<div
-			className="items-center w-1/2 ml-auto"
-			style={{ color: `rgb(${color}, ${color}, ${color})` }}
-			onClick={() => (showNav ? toggleNav() : '')}
-		>
+		<>
+			<NavMenu color={color} className="hidden lg:flex" />
 			<div
-				className={`lg:hidden icon-nav text-3xl px-3 float-right ${
-					showNav ? 'hidden' : ''
-				}`}
-				onClick={() => toggleNav()}
-			></div>
-			<div
-				className={`lg:flex items-center ${
+				className={`${
 					showNav
-						? 'flex transition-opacity opacity-100 bg-custom-blue/95 text-white flex-col justify-center fixed top-0 left-0 w-full h-full'
-						: 'hidden'
-				}`}
+						? 'opacity-100 pointer-events-true'
+						: 'opacity-0 pointer-events-none'
+				} lg:hidden transition-opacity duration-300 flex flex-col justify-center fixed top-0 left-0 w-full h-full bg-custom-blue/95`}
 			>
-				<div
-					className={`icon-close text-3xl px-6 absolute top-5 right-0 ${
-						showNav ? '' : 'hidden'
-					}`}
-					onClick={() => toggleNav()}
-				></div>
-				<div
-					className={`flex ${
-						showNav
-							? 'flex-col items-center pb-8'
-							: 'flex-row items-start pb-0 -translate-x-1/2'
-					} `}
-				>
-					<NavLink page="/">Home</NavLink>
-					<NavLink page="/photography">Photography</NavLink>
-					<NavLink page="/videos">Videos</NavLink>
-					<NavLink page="/music">Music</NavLink>
-					<NavLink page="/projects">Projects</NavLink>
-				</div>
-				<div className={`flex ${showNav ? '' : 'absolute right-4'}`}>
-					<SocialLink
-						icon="instagram"
-						link="https://www.instagram.com/joeowen.ca/"
-					/>
-					<SocialLink
-						icon="youtube"
-						link="https://www.youtube.com/@joeowen_mtb"
-					/>
-					<SocialLink
-						icon="soundcloud"
-						link="https://soundcloud.com/sas-areku"
-					/>
-					<SocialLink
-						icon="github"
-						link="https://github.com/Sas-Areku"
-					/>
-				</div>
+				<NavMenuButton
+					icon="icon-close"
+					display={showNav}
+					onClick={toggleNav}
+				/>
+				<NavMenu />
+			</div>
+			<div style={{ color: `rgb(${color}, ${color}, ${color})` }}>
+				<NavMenuButton
+					icon="icon-nav"
+					display={!showNav}
+					onClick={toggleNav}
+				/>
+			</div>
+		</>
+	);
+}
+
+type NavMenuButtonProps = {
+	icon: string;
+	display: boolean;
+	onClick: Function;
+};
+
+function NavMenuButton({ icon, display, onClick }: NavMenuButtonProps) {
+	return (
+		<div
+			onClick={() => onClick()}
+			className={`${
+				display ? '' : 'hidden'
+			} ${icon} transition-opacity duration-1000 absolute top-0 right-0 p-5 text-3xl lg:hidden`}
+		></div>
+	);
+}
+
+type NavMenuProps = {
+	color?: number;
+	className?: string;
+};
+
+function NavMenu({ color, className }: NavMenuProps) {
+	return (
+		<div
+			className={`select-none flex flex-col lg:flex-row items-center lg:items-start lg:absolute lg:right-0 lg:w-1/2 ${className}`}
+			style={{ color: `rgb(${color}, ${color}, ${color})` }}
+		>
+			<div className="flex flex-col lg:flex-row items-center lg:items-start pb-5 lg:pb-0 lg:-translate-x-[50%]">
+				<NavLink page="/">Home</NavLink>
+				<NavLink page="/photography">Photography</NavLink>
+				<NavLink page="/videos">Videos</NavLink>
+				<NavLink page="/music">Music</NavLink>
+				<NavLink page="/projects">Projects</NavLink>
+			</div>
+			<div className="lg:absolute lg:right-0 lg:mr-5">
+				<SocialLink
+					icon="instagram"
+					link="https://www.instagram.com/joeowen.ca/"
+				/>
+				<SocialLink
+					icon="youtube"
+					link="https://www.youtube.com/@joeowen_mtb"
+				/>
+				<SocialLink
+					icon="soundcloud"
+					link="https://soundcloud.com/sas-areku"
+				/>
+				<SocialLink icon="github" link="https://github.com/Sas-Areku" />
 			</div>
 		</div>
 	);
@@ -85,7 +106,7 @@ function NavLink({ children, page }: NavLinkProps) {
 
 	useEffect(() => {
 		setActive(window.location.pathname === page);
-	});
+	}, []);
 
 	return (
 		<div
