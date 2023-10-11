@@ -11,7 +11,7 @@ import { songs, SongTypes } from './songs';
 export default function MusicContent() {
 	return (
 		<>
-			<Header page="music" />
+			<Header />
 			<Content title="Music">
 				<div className="flex flex-col items-center">
 					<Image

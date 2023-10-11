@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Photography() {
 	return (
 		<>
-			<Header page="photography" />
+			<Header />
 			<Content title="Photography">
 				<pre className="font-sans whitespace-normal max-w-prose">
 					This is the photography page.

@@ -8,10 +8,10 @@ import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
 import Navigation from './navigation';
 
 type HeaderProps = {
-	page: string;
+	scroll?: boolean;
 };
 
-export default function Header({ page }: HeaderProps) {
+export default function Header({ scroll }: HeaderProps) {
 	const [color, setColor] = useState(0);
 
 	function handleScroll() {
@@ -19,7 +19,7 @@ export default function Header({ page }: HeaderProps) {
 	}
 
 	useEffect(() => {
-		if (page !== 'home') {
+		if (!scroll) {
 			setColor(255);
 			return;
 		}

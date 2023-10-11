@@ -6,7 +6,7 @@ import Footer from '@/components/footer';
 export default function Home() {
 	return (
 		<>
-			<Header page="home" />
+			<Header scroll={true} />
 			<main className="flex-1">
 				<Introduction />
 				<Showcase />
