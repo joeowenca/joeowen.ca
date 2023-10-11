@@ -17,10 +17,16 @@ export default function Navigation({ color }: NavigationProps) {
 	return (
 		<>
 			<NavMenu color={color} className="hidden lg:flex" />
-			<div className="lg:hidden flex flex-col justify-center fixed top-0 left-0 w-full h-full bg-custom-blue/95">
-				<NavMenuButton onClick={toggleNav} icon="icon-close" />
-				<NavMenu />
-			</div>
+			{showNav ? (
+				<div className="lg:hidden flex flex-col justify-center fixed top-0 left-0 w-full h-full bg-custom-blue/95">
+					<NavMenuButton onClick={toggleNav} icon="icon-close" />
+					<NavMenu />
+				</div>
+			) : (
+				<div style={{ color: `rgb(${color}, ${color}, ${color})` }}>
+					<NavMenuButton onClick={toggleNav} icon="icon-nav" />
+				</div>
+			)}
 		</>
 	);
 }
@@ -34,7 +40,7 @@ function NavMenuButton({ icon, onClick }: NavMenuButtonProps) {
 	return (
 		<div
 			onClick={() => onClick()}
-			className={`${icon} absolute top-0 right-0 p-5 text-3xl`}
+			className={`${icon} absolute top-0 right-0 p-5 text-3xl lg:hidden`}
 		></div>
 	);
 }
@@ -47,7 +53,7 @@ type NavMenuProps = {
 function NavMenu({ color, className }: NavMenuProps) {
 	return (
 		<div
-			className={`flex flex-col lg:flex-row items-center lg:items-start lg:absolute lg:right-0 lg:w-1/2 ${className}`}
+			className={`select-none flex flex-col lg:flex-row items-center lg:items-start lg:absolute lg:right-0 lg:w-1/2 ${className}`}
 			style={{ color: `rgb(${color}, ${color}, ${color})` }}
 		>
 			<div className="flex flex-col lg:flex-row items-center lg:items-start pb-5 lg:pb-0 lg:-translate-x-[50%]">
