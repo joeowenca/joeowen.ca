@@ -18,9 +18,24 @@ export default function Navigation({ color }: NavigationProps) {
 		<>
 			<NavMenu color={color} className="hidden lg:flex" />
 			<div className="lg:hidden flex flex-col justify-center fixed top-0 left-0 w-full h-full bg-custom-blue/95">
+				<NavMenuButton onClick={toggleNav} icon="icon-close" />
 				<NavMenu />
 			</div>
 		</>
+	);
+}
+
+type NavMenuButtonProps = {
+	icon: string;
+	onClick: Function;
+};
+
+function NavMenuButton({ icon, onClick }: NavMenuButtonProps) {
+	return (
+		<div
+			onClick={() => onClick()}
+			className={`${icon} absolute top-0 right-0 p-5 text-3xl`}
+		></div>
 	);
 }
 
