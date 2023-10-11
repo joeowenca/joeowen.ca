@@ -15,8 +15,21 @@ export default function Navigation({ color }: NavigationProps) {
 	}
 
 	return (
+		<>
+			<NavMenu color={color} className="hidden lg:flex" />
+		</>
+	);
+}
+
+type NavMenuProps = {
+	color?: number;
+	className?: string;
+};
+
+function NavMenu({ color, className }: NavMenuProps) {
+	return (
 		<div
-			className="flex absolute right-0 w-1/2"
+			className={`lg:absolute lg:right-0 lg:w-1/2 ${className}`}
 			style={{ color: `rgb(${color}, ${color}, ${color})` }}
 		>
 			<div className="flex -translate-x-[50%]">
