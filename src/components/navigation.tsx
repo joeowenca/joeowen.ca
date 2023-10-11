@@ -17,30 +17,44 @@ export default function Navigation({ color }: NavigationProps) {
 	return (
 		<>
 			<NavMenu color={color} className="hidden lg:flex" />
-			{showNav ? (
-				<div className="lg:hidden flex flex-col justify-center fixed top-0 left-0 w-full h-full bg-custom-blue/95">
-					<NavMenuButton onClick={toggleNav} icon="icon-close" />
-					<NavMenu />
-				</div>
-			) : (
-				<div style={{ color: `rgb(${color}, ${color}, ${color})` }}>
-					<NavMenuButton onClick={toggleNav} icon="icon-nav" />
-				</div>
-			)}
+			<div
+				className={`${
+					showNav
+						? 'opacity-100 pointer-events-true'
+						: 'opacity-0 pointer-events-none'
+				} lg:hidden transition-opacity duration-300 flex flex-col justify-center fixed top-0 left-0 w-full h-full bg-custom-blue/95`}
+			>
+				<NavMenuButton
+					icon="icon-close"
+					display={showNav}
+					onClick={toggleNav}
+				/>
+				<NavMenu />
+			</div>
+			<div style={{ color: `rgb(${color}, ${color}, ${color})` }}>
+				<NavMenuButton
+					icon="icon-nav"
+					display={!showNav}
+					onClick={toggleNav}
+				/>
+			</div>
 		</>
 	);
 }
 
 type NavMenuButtonProps = {
 	icon: string;
+	display: boolean;
 	onClick: Function;
 };
 
-function NavMenuButton({ icon, onClick }: NavMenuButtonProps) {
+function NavMenuButton({ icon, display, onClick }: NavMenuButtonProps) {
 	return (
 		<div
 			onClick={() => onClick()}
-			className={`${icon} absolute top-0 right-0 p-5 text-3xl lg:hidden`}
+			className={`${
+				display ? '' : 'hidden'
+			} ${icon} transition-opacity duration-1000 absolute top-0 right-0 p-5 text-3xl lg:hidden`}
 		></div>
 	);
 }
