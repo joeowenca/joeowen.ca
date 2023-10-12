@@ -9,17 +9,17 @@ import automotiveShowcase from '../../../public/automotive-showcase.jpg';
 import mountainBikingShowcase from '../../../public/mountain-biking-showcase.jpg';
 import automotiveVideosShowcase from '../../../public/automotive-videos-showcase.jpg';
 import skiingShowcase from '../../../public/skiing-showcase.jpg';
-import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
+import calculateScroll from '@/scripts/calculateScroll';
 
 export default function Showcase() {
 	const [alpha, setAlpha] = useState(0);
 
 	function handleScroll() {
-		setAlpha(calculateScrollAlpha());
+		setAlpha(calculateScroll());
 	}
 
 	useEffect(() => {
-		setAlpha(calculateScrollAlpha());
+		setAlpha(calculateScroll());
 
 		window.addEventListener('scroll', handleScroll);
 
