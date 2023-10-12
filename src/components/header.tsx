@@ -45,12 +45,20 @@ export default function Header({ scroll }: HeaderProps) {
 						src={profilePicture}
 						alt="Profile picture"
 						className={`rounded-full w-14 transition-transform duration-500 ${
-							color === 255 ? '' : '-translate-x-20'
+							scroll
+								? color === 255
+									? ''
+									: '-translate-x-20'
+								: ''
 						}`}
 					/>
 					<h1
 						className={`pl-3 font-serif text-2xl transition-transform duration-500 ${
-							color === 255 ? '' : '-translate-x-14'
+							scroll
+								? color === 255
+									? ''
+									: '-translate-x-14'
+								: ''
 						}`}
 						style={{ color: `rgb(${color}, ${color}, ${color})` }}
 					>
