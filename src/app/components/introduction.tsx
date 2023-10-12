@@ -3,18 +3,18 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { content } from './content';
-import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
+import calculateScroll from '@/scripts/calculateScroll';
 import profilePicture from '../../../public/profile-picture.jpg';
 
 export default function Introduction() {
 	const [alpha, setAlpha] = useState(0);
 
 	function handleScroll() {
-		setAlpha(calculateScrollAlpha());
+		setAlpha(calculateScroll());
 	}
 
 	useEffect(() => {
-		setAlpha(calculateScrollAlpha());
+		setAlpha(calculateScroll());
 
 		window.addEventListener('scroll', handleScroll);
 

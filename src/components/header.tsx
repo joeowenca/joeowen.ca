@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import profilePicture from '../../public/profile-picture.jpg';
-import calculateScrollAlpha from '@/scripts/calculateScrollAlpha';
+import calculateScroll from '@/scripts/calculateScroll';
 import Navigation from './navigation';
 
 type HeaderProps = {
@@ -15,7 +15,7 @@ export default function Header({ scroll }: HeaderProps) {
 	const [color, setColor] = useState(0);
 
 	function handleScroll() {
-		setColor(calculateScrollAlpha() * 255);
+		setColor(calculateScroll() * 255);
 	}
 
 	useEffect(() => {
@@ -24,7 +24,7 @@ export default function Header({ scroll }: HeaderProps) {
 			return;
 		}
 
-		setColor(calculateScrollAlpha() * 255);
+		setColor(calculateScroll() * 255);
 
 		window.addEventListener('scroll', handleScroll);
 
