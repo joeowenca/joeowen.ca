@@ -12,42 +12,35 @@ export const content = {
   showcase: {
     summary: {
       photography: {
-        sports: `I'm all about snapping shots of extreme sports like mountain
-        biking and skiing because they get my heart racing just as
-        much as the athletes. I'm not just a photographer - I'm out
-        there in the action, vibing with fellow adventure junkies.
-        What really gets me stoked is catching those epic,
-        gravity-defying moments that make these sports a wild ride.
-        Flip through my pics to join in on the excitement and
-        adrenaline of extreme sports.`,
+        sports: `As a mountain biker and skier, I've always been inspired by 
+        extreme sports media and content creation. Through taking photos, I have 
+        met many great people in the community which has provided me the opportunity
+        to get out take photos with amazing athletes.`,
 
-        landscapes: `Landscape photography is my jam because it gets me out in
-        the great outdoors, exploring the beauty of our world.
-        Honestly, landscapes just look incredible, and I can't
-        resist framing those stunning vistas. Whether it's chasing
-        sunsets, hiking through mountains, or simply soaking in the
-        serenity of nature, I'm all about capturing these
-        breathtaking scenes and sharing their beauty with the world.`,
+        landscapes: `I started taking photos by capturing landscapes on trips or walks. 
+        Living in BC, it is so accessible to simply go outside and find a great place 
+        to take photos. I love the feeling of capturing a beautiful view that ends up 
+        looking so aesthetically pleasing. Getting the colours and edit the way I like 
+        it is a very satisfying process.`,
 
-        automotive: `I'm all about automotive photography because it's a ticket
-        to an awesome community of people and some seriously cool
-        rides. There's just something about capturing the unique
-        character of cars that gets me going. Plus, I love helping
-        folks preserve their pride and joy through my lens. So,
-        whether it's meeting fellow car enthusiasts, photographing
-        rare beauties, or immortalizing the essence of a car, I'm
-        revved up and ready to roll.`
+        automotive: `Similar to my experience with sports photography, I have come to know
+        many people in the automotive community through photography. Being interested
+        in cars myself, I have always enjoyed meeting up with friends to either take
+        photos of their new cars, or showcase any modifications. The variety in cars
+        is the best part.`
       },
       videos: {
-        mountainbiking: `I make mountain biking videos Oh yes I do. I make them when
-        I ride. It's nice to use a GoPro because I don't even need
-        to think about recording, I just do. This is why I like
-        making Mountain Biking videos.`,
+        mountainbiking: `Mountain biking is my main sport, and through making mountain
+        bike content, I love being able to capture the feeling of a day biking in a video.
+        Pair clips of riding with a great song and you just get some awesome vibes.`,
 
-        automotive: `Car videos! Oooh yes, how I've made a car video. There was a
-        car, it was driving, and I was like, oh ya, let's video it. Before we knew it, a car video was born.`,
+        automotive: `Along with automotive photography, creating videos with cars is
+        such a great way to showcase how it feels to drive and enjoy them.`,
         
-        skiing: `Skiing sometimes. Sometimes take the GoPro with me. Put some music over top, and we got ourselves a skiing video.`
+        skiing: `The same said for mountain biking goes with skiing. When I'm not
+        mountain biking in the winter, getting out for as many ski trips as I can
+        and capturing an awesome day on the mountain is such a great way to
+        document the trip.`
       }
     }
   }
