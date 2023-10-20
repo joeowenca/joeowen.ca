@@ -132,7 +132,7 @@ function ShowcaseItem({
 				<h2 className="font-serif text-2xl py-3">{title}</h2>
 				<pre className="font-sans whitespace-normal">{children}</pre>
 				<button
-					onClick={() => window.location.replace(link)}
+					onClick={() => (window.location.href = link)}
 					className="bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-3"
 				>
 					View more
