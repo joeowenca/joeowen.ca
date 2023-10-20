@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image';
 import joeowen from '../../../public/joe-owen-logo.png';
 import budgeit from '../../../public/budge-it-logo.png';
+import apppage from '../../../public/app-page.jpg';
 import spacephysics from '../../../public/space-physics-logo.png';
 import cloudflare from '../../../public/cloudflare-logo.png';
 
@@ -29,6 +30,14 @@ export const projects:ProjectTypes[] = [
     repo: "https://github.com/Sas-Areku/image-uploader",
     description: "Image uploader to Cloudflare Images CDN",
     tech: ["JavaScript", "Node.js", "REST APIs"],
+  },
+  {
+    title: "App Page",
+    image: apppage,
+    deployment: "https://app-page-nine.vercel.app/edit",
+    repo: "https://github.com/Sas-Areku/app-page",
+    description: "Customizable app page for easy-access bookmarks",
+    tech: ["TypeScript", "React", "Tailwind CSS"],
   },
   {
     title: "Budge-it",
