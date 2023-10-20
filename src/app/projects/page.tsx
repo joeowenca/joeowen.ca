@@ -20,6 +20,7 @@ export default function Projects() {
 						<ProjectItem
 							title={project.title}
 							image={project.image}
+							tech={project.tech}
 							deployment={project.deployment}
 							repo={project.repo}
 							key={project.title}
@@ -37,6 +38,7 @@ export default function Projects() {
 type ProjectItemProps = {
 	title: string;
 	image: StaticImageData;
+	tech: string[];
 	deployment: string;
 	repo: string;
 	children: string;
@@ -45,6 +47,7 @@ type ProjectItemProps = {
 function ProjectItem({
 	title,
 	image,
+	tech,
 	deployment,
 	repo,
 	children,
@@ -57,9 +60,12 @@ function ProjectItem({
 				alt={`${title} project thumbnail`}
 			/>
 			<div className="flex flex-col items-center lg:items-baseline max-w-prose">
-				<h2 className="font-serif text-center lg:text-left text-2xl py-3">
+				<h2 className="font-serif text-center lg:text-left text-2xl py-2">
 					{title}
 				</h2>
+				<pre className="font-sans italic whitespace-normal pb-5">
+					{tech.join(' | ')}
+				</pre>
 				<pre className="font-sans whitespace-normal pb-1.5">
 					{children}
 				</pre>

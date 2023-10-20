@@ -10,6 +10,7 @@ export type ProjectTypes = {
   deployment: string;
   repo: string;
   description: string;
+  tech: string[];
 }
 
 export const projects:ProjectTypes[] = [
@@ -18,27 +19,31 @@ export const projects:ProjectTypes[] = [
     image: joeowen,
     deployment: "https://www.joeowen.ca/",
     repo: "https://github.com/Sas-Areku/joeowen.ca",
-    description: "Portfolio and photography website"
-  },
-  {
-    title: "Budge-it",
-    image: budgeit,
-    deployment: "https://sas-areku.github.io/budge-it/",
-    repo: "https://github.com/Sas-Areku/budge-it",
-    description: "Simple budget app for visualizing your expenses"
-  },
-  {
-    title: "Space Physics",
-    image: spacephysics,
-    deployment: "https://sas-areku.github.io/space-physics/",
-    repo: "https://github.com/Sas-Areku/space-physics",
-    description: "Space physics simulation using HTML Canvas"
+    description: "Portfolio and photography website",
+    tech: ["TypeScript", "React", "REST APIs", "Tailwind CSS"],
   },
   {
     title: "Image Uploader",
     image: cloudflare,
     deployment: "none",
     repo: "https://github.com/Sas-Areku/image-uploader",
-    description: "Image uploader to Cloudflare Images CDN"
+    description: "Image uploader to Cloudflare Images CDN",
+    tech: ["JavaScript", "Node.js", "REST APIs"],
+  },
+  {
+    title: "Budge-it",
+    image: budgeit,
+    deployment: "https://sas-areku.github.io/budge-it/",
+    repo: "https://github.com/Sas-Areku/budge-it",
+    description: "Simple budget app for visualizing your expenses",
+    tech: ["JavaScript", "React"],
+  },
+  {
+    title: "Space Physics",
+    image: spacephysics,
+    deployment: "https://sas-areku.github.io/space-physics/",
+    repo: "https://github.com/Sas-Areku/space-physics",
+    description: "Space physics simulation using HTML Canvas",
+    tech: ["JavaScript", "React", "HTML Canvas"],
   },
 ];
