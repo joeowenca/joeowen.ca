@@ -12,8 +12,8 @@ export default function Photography() {
 		<>
 			<Header />
 			<Content title="Photography">
-				<pre className="font-sans whitespace-normal max-w-prose">
-					This is the photography page.
+				<pre className="font-sans whitespace-normal max-w-prose mb-[100vh]">
+					Coming soon.
 				</pre>
 			</Content>
 			<Footer />

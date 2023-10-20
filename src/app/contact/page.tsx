@@ -12,8 +12,8 @@ export default function Contact() {
 		<>
 			<Header />
 			<Content title="Contact">
-				<pre className="font-sans whitespace-normal max-w-prose">
-					My name is Joe, but you can call me anytime.
+				<pre className="font-sans whitespace-normal max-w-prose mb-[100vh]">
+					Coming soon.
 				</pre>
 			</Content>
 			<Footer />
