@@ -44,6 +44,7 @@ export default function Showcase() {
 					image={sportsShowcase}
 					fill={false}
 					align="left"
+					link="/photography"
 				>
 					{content.showcase.summary.photography.sports}
 				</ShowcaseItem>
@@ -52,6 +53,7 @@ export default function Showcase() {
 					image={landscapeShowcase}
 					fill={false}
 					align="right"
+					link="/photography"
 				>
 					{content.showcase.summary.photography.landscapes}
 				</ShowcaseItem>
@@ -60,6 +62,7 @@ export default function Showcase() {
 					image={automotiveShowcase}
 					fill={false}
 					align="left"
+					link="/photography"
 				>
 					{content.showcase.summary.photography.automotive}
 				</ShowcaseItem>
@@ -72,6 +75,7 @@ export default function Showcase() {
 					image={mountainBikingShowcase}
 					fill={true}
 					align="left"
+					link="/videos"
 				>
 					{content.showcase.summary.videos.mountainbiking}
 				</ShowcaseItem>
@@ -80,6 +84,7 @@ export default function Showcase() {
 					image={automotiveVideosShowcase}
 					fill={true}
 					align="left"
+					link="/videos"
 				>
 					{content.showcase.summary.videos.automotive}
 				</ShowcaseItem>
@@ -88,6 +93,7 @@ export default function Showcase() {
 					image={skiingShowcase}
 					fill={true}
 					align="left"
+					link="/videos"
 				>
 					{content.showcase.summary.videos.skiing}
 				</ShowcaseItem>
@@ -101,6 +107,7 @@ type ShowcaseItemProps = {
 	image: StaticImageData;
 	fill: boolean;
 	align: string;
+	link: string;
 	children: string;
 };
 
@@ -109,6 +116,7 @@ function ShowcaseItem({
 	image,
 	fill,
 	align,
+	link,
 	children,
 }: ShowcaseItemProps) {
 	return (
@@ -123,7 +131,10 @@ function ShowcaseItem({
 			<div className="max-w-prose">
 				<h2 className="font-serif text-2xl py-3">{title}</h2>
 				<pre className="font-sans whitespace-normal">{children}</pre>
-				<button className="bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-3">
+				<button
+					onClick={() => window.location.replace(link)}
+					className="bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-3"
+				>
 					View more
 				</button>
 			</div>
