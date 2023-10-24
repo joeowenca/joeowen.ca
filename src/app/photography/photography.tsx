@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react';
 import Header from '@/components/header';
 import Content from '@/components/content';
 import Footer from '@/components/footer';
-import getPhotos from './getPhotos';
+import { getPhotos, CategoryTypes } from './getPhotos';
 
 export default function PhotographyContent() {
-	const [photos, setPhotos] = useState();
+	const [photoCategories, setPhotoCategories] = useState<CategoryTypes>();
 
 	async function handleGetPhotos() {
 		const response = await getPhotos();
-		setPhotos(response);
+		setPhotoCategories(response);
 	}
 
 	useEffect(() => {
@@ -22,9 +22,17 @@ export default function PhotographyContent() {
 		<>
 			<Header />
 			<Content title="Photography">
-				<pre className="font-sans whitespace-normal max-w-prose mb-[100vh]">
-					Coming soon.
-				</pre>
+				<div>
+					{photoCategories
+						? photoCategories.children.length > 0
+							? photoCategories.children.map(
+									(category, index) => (
+										<p key={index}>{category.name}</p>
+									),
+							  )
+							: null
+						: null}
+				</div>
 			</Content>
 			<Footer />
 		</>
