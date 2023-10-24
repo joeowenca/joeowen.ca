@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react';
 import Header from '@/components/header';
 import Content from '@/components/content';
 import Footer from '@/components/footer';
-import { getPhotos, CategoryTypes } from './getPhotos';
+import { getPhotographyManifest, CategoryTypes } from './getPhotos';
 
 export default function PhotographyContent() {
-	const [photoCategories, setPhotoCategories] = useState<CategoryTypes>();
+	const [manifest, setManifest] = useState<CategoryTypes>();
 
 	async function handleGetPhotos() {
-		const response = await getPhotos();
-		setPhotoCategories(response);
+		const photographyManifest = await getPhotographyManifest();
+		setManifest(photographyManifest);
 	}
 
 	useEffect(() => {
@@ -23,13 +23,11 @@ export default function PhotographyContent() {
 			<Header />
 			<Content title="Photography">
 				<div>
-					{photoCategories
-						? photoCategories.children.length > 0
-							? photoCategories.children.map(
-									(category, index) => (
-										<p key={index}>{category.name}</p>
-									),
-							  )
+					{manifest
+						? manifest.children.length > 0
+							? manifest.children.map((category, index) => (
+									<p key={index}>{category.name}</p>
+							  ))
 							: null
 						: null}
 				</div>
