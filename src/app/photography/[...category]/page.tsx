@@ -1,4 +1,8 @@
-import { getPhotographyManifest, CategoryTypes } from '../getPhotos';
+import {
+	getPhotographyManifest,
+	CategoryTypes,
+	PhotoTypes,
+} from '../getPhotos';
 
 type CategoryProps = {
 	params: {
@@ -33,18 +37,25 @@ function findCategory(manifest: CategoryTypes, categoryPath: string) {
 		return foundCategory;
 	} else {
 		console.error('Category not found.');
+		return null;
 	}
 }
 
 function generateFlatList(manifest: CategoryTypes) {
 	const flatList: CategoryTypes[] = [];
 
+	function isCategoryType(
+		item: PhotoTypes | CategoryTypes,
+	): item is CategoryTypes {
+		return item.type === 'Category';
+	}
+
 	function recursiveSearch(
 		manifest: CategoryTypes,
 		flatList: CategoryTypes[],
 	) {
 		manifest.children.map((item) => {
-			if (item.type === 'Category') {
+			if (isCategoryType(item)) {
 				flatList.push(item);
 				recursiveSearch(item, flatList);
 			}
