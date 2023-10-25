@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import path from 'path';
 
 type CategoryButtonProps = {
 	category: string;
@@ -15,7 +16,7 @@ export default function CategoryButton({ category }: CategoryButtonProps) {
 
 	return (
 		<div onClick={handleClick} className="cursor-pointer">
-			{category}
+			{path.basename(category)}
 		</div>
 	);
 }
