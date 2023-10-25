@@ -1,6 +1,7 @@
 export type CategoryTypes = {
   children: (PhotoTypes | CategoryTypes)[];
   name: string;
+  path: string;
   type: string;
 }
 
