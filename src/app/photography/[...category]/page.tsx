@@ -36,7 +36,7 @@ export default async function Category({ params }: CategoryProps) {
 							  ))
 							: null}
 					</div>
-					<div className="grid grid-cols-6 gap-5 p-5 max-w-7xl">
+					<div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-5 p-5 max-w-7xl">
 						{images.length > 0
 							? images.map((image, index) => (
 									<Image
