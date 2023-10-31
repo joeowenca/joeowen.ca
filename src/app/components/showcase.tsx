@@ -113,7 +113,7 @@ function ShowcaseItem({ title, image, link, children }: ShowcaseItemProps) {
 					<h2 className="font-serif text-3xl lg:text-4xl py-3">
 						{title}
 					</h2>
-					<pre className="font-sans whitespace-normal">
+					<pre className="font-sans whitespace-normal [text-shadow:_0_0_5px_black]">
 						{children}
 					</pre>
 					<button
