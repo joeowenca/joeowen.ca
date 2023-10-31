@@ -1,5 +1,5 @@
 export default function calculateScroll():number {
-  const threshold = 1.5;
+  const threshold = 1.1;
   const scroll = Math.min(
     window.scrollY / (window.innerHeight / threshold),
     1,

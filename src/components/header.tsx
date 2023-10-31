@@ -36,7 +36,7 @@ export default function Header({ scroll }: HeaderProps) {
 	return (
 		<div
 			className={`fixed top-0 left-0 flex items-center w-full max-h-20 p-3 z-50 ${
-				color === 255 ? 'bg-black' : ''
+				color === 255 ? 'black-gradient-down' : ''
 			}`}
 		>
 			<Link href="/">

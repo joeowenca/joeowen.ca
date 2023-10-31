@@ -3,9 +3,9 @@
 import { useEffect, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { content } from './content';
-import sportsShowcase from '../../../public/sports-showcase.jpg';
-import landscapeShowcase from '../../../public/landscape-showcase.jpg';
-import automotiveShowcase from '../../../public/automotive-showcase.jpg';
+import sportsShowcase from '../../../public/sports-showcase-long-2.jpg';
+import landscapeShowcase from '../../../public/landscape-showcase-long.jpg';
+import automotiveShowcase from '../../../public/automotive-showcase-long-2.jpg';
 import mountainBikingShowcase from '../../../public/mountain-biking-showcase.jpg';
 import automotiveVideosShowcase from '../../../public/automotive-videos-showcase.jpg';
 import skiingShowcase from '../../../public/skiing-showcase.jpg';
@@ -30,20 +30,15 @@ export default function Showcase() {
 
 	return (
 		<div
-			className={`flex justify-center p-3 ${
+			className={`flex justify-center ${
 				alpha === 0 ? 'mt-[100vh]' : 'pt-[100vh]'
 			}`}
 			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})` }}
 		>
 			<div>
-				<h1 className="p-5 text-center font-serif text-2xl">
-					{'Photography'}
-				</h1>
 				<ShowcaseItem
 					title="Sports"
 					image={sportsShowcase}
-					fill={false}
-					align="left"
 					link="/photography"
 				>
 					{content.showcase.summary.photography.sports}
@@ -51,8 +46,6 @@ export default function Showcase() {
 				<ShowcaseItem
 					title="Landscapes"
 					image={landscapeShowcase}
-					fill={false}
-					align="right"
 					link="/photography"
 				>
 					{content.showcase.summary.photography.landscapes}
@@ -60,14 +53,12 @@ export default function Showcase() {
 				<ShowcaseItem
 					title="Automotive"
 					image={automotiveShowcase}
-					fill={false}
-					align="left"
 					link="/photography"
 				>
 					{content.showcase.summary.photography.automotive}
 				</ShowcaseItem>
 
-				<h1 className="p-5 text-center font-serif text-2xl">
+				{/* <h1 className="p-5 text-center font-serif text-2xl">
 					{'Videos'}
 				</h1>
 				<ShowcaseItem
@@ -96,7 +87,7 @@ export default function Showcase() {
 					link="/videos"
 				>
 					{content.showcase.summary.videos.skiing}
-				</ShowcaseItem>
+				</ShowcaseItem> */}
 			</div>
 		</div>
 	);
@@ -105,38 +96,31 @@ export default function Showcase() {
 type ShowcaseItemProps = {
 	title: string;
 	image: StaticImageData;
-	fill: boolean;
-	align: string;
 	link: string;
 	children: string;
 };
 
-function ShowcaseItem({
-	title,
-	image,
-	fill,
-	align,
-	link,
-	children,
-}: ShowcaseItemProps) {
+function ShowcaseItem({ title, image, link, children }: ShowcaseItemProps) {
 	return (
-		<section className="flex flex-col lg:flex-row items-center lg:px-2.5 pb-6 max-w-7xl">
+		<section className="relative">
 			<Image
-				className={`lg:max-w-xs 3xl:max-w-sm lg:pb-0 pb-1 ${
-					fill ? 'max-w-[80%] xs:max-w-sm' : 'max-w-[65%] xs:max-w-xs'
-				} ${align === 'right' ? 'lg:order-last lg:pl-5' : 'lg:pr-5'}`}
+				className="w-[100vw] h-[100vh] aspect-video object-cover"
 				src={image}
 				alt={`${title} showcase image`}
 			/>
-			<div className="max-w-prose">
-				<h2 className="font-serif text-2xl py-3">{title}</h2>
-				<pre className="font-sans whitespace-normal">{children}</pre>
-				<button
-					onClick={() => (window.location.href = link)}
-					className="bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-3"
-				>
-					View more
-				</button>
+			<div className="absolute left-0 top-0 h-full w-1/2 px-[5%] flex items-center black-gradient-left">
+				<div className="max-w-prose">
+					<h2 className="font-serif text-4xl py-3">{title}</h2>
+					<pre className="font-sans whitespace-normal">
+						{children}
+					</pre>
+					<button
+						onClick={() => (window.location.href = link)}
+						className="bg-custom-blue hover:bg-custom-light-blue transition-colors px-4 py-3 my-3"
+					>
+						View more
+					</button>
+				</div>
 			</div>
 		</section>
 	);
