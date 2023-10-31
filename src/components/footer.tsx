@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 export default function Footer() {
 	return (
-		<div className="flex flex-col items-center w-full pt-5 bg-black custom-shadow">
+		<div className="flex flex-col items-center w-full bg-black">
+			<div className="absolute w-full h-20 -translate-y-[100%] black-gradient-up"></div>
 			<div className="sm:flex max-w-prose">
 				<div className="pb-5">
 					<h2 className="py-2 px-6 font-serif text-xl">

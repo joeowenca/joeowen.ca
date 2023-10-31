@@ -5,7 +5,7 @@ import Image, { StaticImageData } from 'next/image';
 import { content } from './content';
 import sportsShowcase from '../../../public/sports-showcase-long-2.jpg';
 import landscapeShowcase from '../../../public/landscape-showcase-long.jpg';
-import automotiveShowcase from '../../../public/automotive-showcase-long-2.jpg';
+import automotiveShowcase from '../../../public/automotive-showcase-long.jpg';
 import mountainBikingShowcase from '../../../public/mountain-biking-showcase.jpg';
 import automotiveVideosShowcase from '../../../public/automotive-videos-showcase.jpg';
 import skiingShowcase from '../../../public/skiing-showcase.jpg';
@@ -60,7 +60,7 @@ export default function Showcase() {
 
 				{/* <h1 className="p-5 text-center font-serif text-2xl">
 					{'Videos'}
-				</h1>
+				</h1
 				<ShowcaseItem
 					title="Mountain biking"
 					image={mountainBikingShowcase}
@@ -108,9 +108,11 @@ function ShowcaseItem({ title, image, link, children }: ShowcaseItemProps) {
 				src={image}
 				alt={`${title} showcase image`}
 			/>
-			<div className="absolute left-0 top-0 h-full w-1/2 px-[5%] flex items-center black-gradient-left">
-				<div className="max-w-prose">
-					<h2 className="font-serif text-4xl py-3">{title}</h2>
+			<div className="absolute top-0 h-full w-full lg:w-1/2 p-3 lg:p-10 flex justify-center lg:items-center black-gradient">
+				<div className="flex flex-col items-center lg:items-start max-w-prose mt-auto lg:mt-0 pb-5 lg:pb-0 z-10">
+					<h2 className="font-serif text-3xl lg:text-4xl py-3">
+						{title}
+					</h2>
 					<pre className="font-sans whitespace-normal">
 						{children}
 					</pre>
