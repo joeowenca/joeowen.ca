@@ -57,37 +57,27 @@ export default function Showcase() {
 				>
 					{content.showcase.summary.photography.automotive}
 				</ShowcaseItem>
-
-				{/* <h1 className="p-5 text-center font-serif text-2xl">
-					{'Videos'}
-				</h1
 				<ShowcaseItem
-					title="Mountain biking"
+					title="Mountain biking videos"
 					image={mountainBikingShowcase}
-					fill={true}
-					align="left"
 					link="/videos"
 				>
 					{content.showcase.summary.videos.mountainbiking}
 				</ShowcaseItem>
 				<ShowcaseItem
-					title="Automotive"
+					title="Automotive videos"
 					image={automotiveVideosShowcase}
-					fill={true}
-					align="left"
 					link="/videos"
 				>
 					{content.showcase.summary.videos.automotive}
 				</ShowcaseItem>
 				<ShowcaseItem
-					title="Skiing"
+					title="Skiing videos"
 					image={skiingShowcase}
-					fill={true}
-					align="left"
 					link="/videos"
 				>
 					{content.showcase.summary.videos.skiing}
-				</ShowcaseItem> */}
+				</ShowcaseItem>
 			</div>
 		</div>
 	);
