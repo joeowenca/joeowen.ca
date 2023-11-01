@@ -17,8 +17,6 @@ export default function getCategories(category: CategoryTypes | null) {
         categories.push(item);
       }
     });
-  } else {
-    return categories;
   }
   return categories;
 }

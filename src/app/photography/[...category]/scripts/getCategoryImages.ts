@@ -15,8 +15,6 @@ export default function getCategoryImages(category: CategoryTypes | null) {
         images.push(item);
       }
     });
-  } else {
-    return images;
   }
   return images;
 }
