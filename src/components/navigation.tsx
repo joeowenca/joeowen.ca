@@ -111,7 +111,7 @@ function NavLink({ children, page }: NavLinkProps) {
 	return (
 		<div
 			className={`p-1 px-2 text-xl hover:opacity-100 transition-opacity
-		${active ? 'opacity-100' : 'lg:opacity-75'}`}
+		${active ? 'opacity-100' : 'lg:opacity-50'}`}
 		>
 			<Link href={page}>{children}</Link>
 		</div>
@@ -128,7 +128,7 @@ function SocialLink({ icon, link }: SocialLinkProps) {
 		<Link
 			href={link}
 			target="_blank"
-			className={`px-2.5 text-xl lg:opacity-75 hover:opacity-100 transition-opacity icon-${icon}`}
+			className={`px-2.5 text-xl lg:opacity-50 hover:opacity-100 transition-opacity icon-${icon}`}
 		/>
 	);
 }
