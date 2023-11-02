@@ -33,7 +33,7 @@ export default function Showcase() {
 			className={`flex justify-center ${
 				alpha === 0 ? 'mt-[100vh]' : 'pt-[100vh]'
 			}`}
-			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})` }}
+			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})`, opacity: alpha * 1.1 }}
 		>
 			<div>
 				<ShowcaseItem
