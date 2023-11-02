@@ -131,10 +131,10 @@ function ShowcaseItem({ id, title, image, link, children }: ShowcaseItemProps) {
 					style={{ top: position }}
 					className="relative flex flex-col items-center lg:items-start max-w-prose mt-auto lg:mt-0 pb-20 lg:pb-5 lg:pb-0 z-10"
 				>
-					<h2 className="font-serif text-3xl lg:text-4xl py-3">
+					<h2 style={{ textShadow: "0px 0px 10px black" }} className="font-serif text-3xl lg:text-4xl py-3">
 						{title}
 					</h2>
-					<pre className="font-sans whitespace-normal [text-shadow:_0_0_5px_black]">
+					<pre style={{ textShadow: "0px 0px 5px black" }} className="font-sans whitespace-normal">
 						{children}
 					</pre>
 					<button
