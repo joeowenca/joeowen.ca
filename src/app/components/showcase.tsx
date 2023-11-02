@@ -33,7 +33,7 @@ export default function Showcase() {
 			className={`flex justify-center ${
 				alpha === 0 ? 'mt-[100vh]' : 'pt-[100vh]'
 			}`}
-			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})` }}
+			style={{ backgroundColor: `rgba(0, 0, 0, ${alpha})`, opacity: alpha * 1.1 }}
 		>
 			<div>
 				<ShowcaseItem
@@ -129,7 +129,7 @@ function ShowcaseItem({ id, title, image, link, children }: ShowcaseItemProps) {
 			<div className="absolute top-0 h-full w-full lg:w-1/2 p-3 lg:p-10 flex justify-center lg:items-center black-gradient">
 				<div
 					style={{ top: position }}
-					className="relative flex flex-col items-center lg:items-start max-w-prose mt-auto lg:mt-0 pb-20 lg:pb-5 lg:pb-0 z-10"
+					className="relative flex flex-col items-center lg:items-start max-w-prose mt-auto lg:mt-0 pb-16 lg:pb-5 lg:pb-0 z-10"
 				>
 					<h2 style={{ textShadow: "0px 0px 10px black" }} className="font-serif text-3xl lg:text-4xl py-3">
 						{title}

@@ -1,13 +1,12 @@
 export const content = {
   introduction: {
-    summary: `Welcome!
-    This website is a place for me to share all of my creative work.
+    summary: `This website is a place for me to share all of my creative work.
     I'm a photographer, video creator, musician, and software developer.
     Feel free to take a look around and I hope you'll like what you see.`,
 
     collaborate: `Always happy to work with people.
-    If you're interested in partering or have any questions,
-    you can find my email at the bottom of this page.`
+    If you're interested in partnering or have any questions,
+    you can find the contact page in the footer.`
   },
   showcase: {
     summary: {

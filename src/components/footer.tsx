@@ -6,7 +6,7 @@ export default function Footer() {
 			<div className="absolute w-full h-16 -translate-y-[100%] black-gradient-up"></div>
 			<div className="sm:flex max-w-prose">
 				<div className="pb-5">
-					<h2 className="py-2 px-6 font-serif text-xl">
+					<h2 className="py-2 px-6 font-serif text-xl text-center lg:text-left">
 						Social Links
 					</h2>
 					<div className="flex">
@@ -66,7 +66,7 @@ export default function Footer() {
 					</div>
 				</div>
 				<div className="pb-5">
-					<h2 className="py-2 px-6 font-serif text-xl">Pages</h2>
+					<h2 className="py-2 px-6 font-serif text-xl text-center lg:text-left">Pages</h2>
 					<div className="flex">
 						<ul className="px-6 w-1/2">
 							<FooterLinkItem
