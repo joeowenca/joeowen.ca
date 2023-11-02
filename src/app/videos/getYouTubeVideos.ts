@@ -59,7 +59,7 @@ export async function GetYouTubeVideos() {
 
 async function FetchYouTubeVideos() {
   try {
-    const response = await fetch(requestURL);
+    const response = await fetch(requestURL, { next: { revalidate: 3600 } });
 
     if (!response.ok) {
       throw new Error(`Failed to fetch YouTube videos: ${response.statusText}, ${JSON.stringify(response)}`);
