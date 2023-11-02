@@ -41,7 +41,7 @@ export default function Introduction() {
 					<h2 className="py-5 lg:p-12 font-serif text-4xl lg:text-6xl text-black">Joe Owen<small className="font-sans font-light text-2xl lg:text-3xl pl-2">.ca</small></h2>
 				</div>
 				<div className="flex items-center justify-center h-1/3 grow-1">
-					<div className="max-w-prose p-3">
+					<div className="max-w-prose p-3 mb-5">
 						<IntroParagraph>
 							{content.introduction.summary}
 						</IntroParagraph>
