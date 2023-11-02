@@ -19,7 +19,7 @@ export type PhotoTypes = {
 
 export async function getPhotographyManifest() {
   try {
-    const response = await fetch("https://photography-5abf9-default-rtdb.firebaseio.com/photography.json");
+    const response = await fetch("https://photography-5abf9-default-rtdb.firebaseio.com/photography.json", { next: { revalidate: 3600 } });
     if (response.ok) {
       return await response.json();
     }
