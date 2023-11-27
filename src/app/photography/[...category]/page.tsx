@@ -36,15 +36,16 @@ export default async function Category({ params }: CategoryProps) {
 							  ))
 							: null}
 					</div>
-					<div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-3 max-w-7xl">
+					<div className="grid md:grid-cols-4 grid-cols-2 gap-3 max-w-7xl">
 						{images.length > 0
 							? images.map((image, index) => (
 									<Image
 										key={index}
 										className="aspect-square object-cover"
 										src={image.variants.thumbnail}
-										width={250}
-										height={250}
+										width={400}
+										height={400}
+										quality={100}
 										alt={image.name}
 									/>
 							  ))
