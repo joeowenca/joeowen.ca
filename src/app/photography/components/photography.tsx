@@ -1,8 +1,9 @@
 import Header from '@/components/header';
 import Content from '@/components/content';
 import Footer from '@/components/footer';
-import CategoryButton from './CategoryButton';
+import CategoryItem from './CategoryItem';
 import { getPhotographyManifest, CategoryTypes } from '../getPhotos';
+import categoryImage from '../../../../public/automotive-showcase-long-2.jpg';
 
 export default async function PhotographyContent() {
 	const manifest: CategoryTypes = await getPhotographyManifest();
@@ -10,13 +11,16 @@ export default async function PhotographyContent() {
 	return (
 		<>
 			<Header />
-			<Content title="Photography">
-				<div>
-					{manifest.children.map((category, index) => (
-						<CategoryButton key={index} category={category.name} />
-					))}
-				</div>
-			</Content>
+			<div>
+				{manifest.children.map((category, index) => (
+					<CategoryItem
+						id={`${category.name}-item`}
+						image={categoryImage}
+						category={category.name}
+						key={index}
+					/>
+				))}
+			</div>
 			<Footer />
 		</>
 	);
