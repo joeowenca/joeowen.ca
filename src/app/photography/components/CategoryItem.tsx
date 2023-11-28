@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image, { StaticImageData } from 'next/image';
-import path from 'path';
 
 type CategoryItemProps = {
 	id: string;
@@ -43,7 +42,7 @@ export default function CategoryItem({
 	}, []);
 
 	return (
-		<section id={id} className="relative">
+		<div id={id} className="relative">
 			<Image
 				className="w-[100vw] h-[100vh] aspect-video object-cover"
 				src={image}
@@ -68,6 +67,6 @@ export default function CategoryItem({
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 }

@@ -1,6 +1,6 @@
 import Header from '@/components/header';
-import Content from '@/components/content';
 import Footer from '@/components/footer';
+import PhotographyIntroduction from './PhotographyIntroduction';
 import CategoryItem from './CategoryItem';
 import { getPhotographyManifest, CategoryTypes } from '../getPhotos';
 import categoryImage from '../../../../public/automotive-showcase-long-2.jpg';
@@ -11,7 +11,8 @@ export default async function PhotographyContent() {
 	return (
 		<>
 			<Header />
-			<div>
+			<PhotographyIntroduction />
+			<div className="mt-[100vh]">
 				{manifest.children.map((category, index) => (
 					<CategoryItem
 						id={`${category.name}-item`}
