@@ -70,7 +70,10 @@ function NavMenu({ color, className }: NavMenuProps) {
 			className={`select-none flex flex-col lg:flex-row items-center lg:items-start lg:absolute lg:right-0 lg:w-1/2 ${className}`}
 			style={{ color: `rgb(${color}, ${color}, ${color})` }}
 		>
-			<div style={{ textShadow: color === 255 ? "0px 0px 5px black" : "" }} className="flex flex-col lg:flex-row items-center lg:items-start pb-5 lg:pb-0 lg:-translate-x-[50%]">
+			<div
+				style={{ textShadow: color === 255 ? '0px 0px 5px black' : '' }}
+				className="flex flex-col lg:flex-row items-center lg:items-start pb-5 lg:pb-0 lg:-translate-x-[50%]"
+			>
 				<NavLink page="/">Home</NavLink>
 				<NavLink page="/photography">Photography</NavLink>
 				<NavLink page="/videos">Videos</NavLink>
@@ -90,7 +93,7 @@ function NavMenu({ color, className }: NavMenuProps) {
 					icon="soundcloud"
 					link="https://soundcloud.com/sas-areku"
 				/>
-				<SocialLink icon="github" link="https://github.com/Sas-Areku" />
+				<SocialLink icon="github" link="https://github.com/joeowenca" />
 			</div>
 		</div>
 	);

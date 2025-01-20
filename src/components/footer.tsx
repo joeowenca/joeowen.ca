@@ -49,7 +49,7 @@ export default function Footer() {
 								Facebook
 							</FooterLinkItem>
 							<FooterLinkItem
-								link="https://github.com/Sas-Areku"
+								link="https://github.com/joeowenca"
 								redirect={true}
 								icon="github"
 							>
@@ -66,7 +66,9 @@ export default function Footer() {
 					</div>
 				</div>
 				<div className="pb-5">
-					<h2 className="py-2 px-6 font-serif text-xl text-center lg:text-left">Pages</h2>
+					<h2 className="py-2 px-6 font-serif text-xl text-center lg:text-left">
+						Pages
+					</h2>
 					<div className="flex">
 						<ul className="px-6 w-1/2">
 							<FooterLinkItem
