@@ -7,7 +7,7 @@ import Image, { StaticImageData } from 'next/image';
 type CategoryItemProps = {
 	id: string;
 	category: string;
-	image: StaticImageData;
+	image: string;
 };
 
 export default function CategoryItem({
@@ -42,10 +42,13 @@ export default function CategoryItem({
 	}, []);
 
 	return (
-		<div id={id} className="relative">
+		<div id={id} className="relative w-[100vw] h-[100vh]">
 			<Image
 				className="w-[100vw] h-[100vh] aspect-video object-cover"
 				src={image}
+				layout="fill"
+				objectFit="cover"
+				quality={100}
 				alt={`${category} showcase image`}
 			/>
 			<div className="absolute bottom-0 h-1/2 w-full p-3 lg:p-10 flex justify-center items-center black-gradient-up">
