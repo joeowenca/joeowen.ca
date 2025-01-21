@@ -1,22 +1,48 @@
 import Header from '@/components/header';
-import Content from '@/components/content';
 import Footer from '@/components/footer';
-import CategoryButton from './CategoryButton';
-import { getPhotographyManifest, CategoryTypes } from '../getPhotos';
+import PhotographyIntroduction from './PhotographyIntroduction';
+import CategoryItem from './CategoryItem';
+import {
+	getPhotographyManifest,
+	CategoryTypes,
+	PhotoTypes,
+} from '../getPhotos';
 
 export default async function PhotographyContent() {
 	const manifest: CategoryTypes = await getPhotographyManifest();
 
+	function isCategoryType(
+		item: CategoryTypes | PhotoTypes,
+	): item is CategoryTypes {
+		return 'children' in item;
+	}
+
 	return (
 		<>
 			<Header />
-			<Content title="Photography">
-				<div>
-					{manifest.children.map((category, index) => (
-						<CategoryButton key={index} category={category.name} />
-					))}
-				</div>
-			</Content>
+			<PhotographyIntroduction />
+			<div className="mt-[100vh]">
+				{manifest.children
+					.filter(isCategoryType)
+					.map((category, index) => {
+						const indexPhoto = category.children.find(
+							(child): child is PhotoTypes => 'name' in child,
+						);
+
+						if (indexPhoto && indexPhoto.name === 'index.jpg') {
+							return (
+								<CategoryItem
+									id={`${category.name}-item`}
+									image={indexPhoto.variants.public}
+									category={category.name}
+									key={index}
+								/>
+							);
+						}
+
+						return null;
+					})}
+			</div>
 			<Footer />
 		</>
 	);
